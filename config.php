@@ -1,6 +1,6 @@
 <?php
-$team = '';
-$teamname = '';
+$team = '5516';
+$teamname = 'IronMaple';
 $variables = array (
   0 => 
   array (

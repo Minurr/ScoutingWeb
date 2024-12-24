@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $php_code = "<?php\n\$team = '$team';\n\$teamname = '$teamname';\n\$variables = " . var_export($variables, true) . ";";
 
     if (eval('?>' . $php_code) === false) {
-        die('生成的 PHP 文件无效！');
+        die('114(nooooo<br>check the configs php');
     }
 
     file_put_contents('config.php', $php_code);

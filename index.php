@@ -52,6 +52,7 @@ $teamCode = $matches[1] ?? 'Unknown';
             <input type="text" id="team" name="team" placeholder="114514">
             <input type="submit" value="Submit">
         </form>
+        <p>Put the teamcode and click the button to query the data.</p>
         <br><br>
         <!-- 放两个links在这里，后面优化样式。。。 -->
         <a href='./scout.php'>Scouting Site</a><br>
