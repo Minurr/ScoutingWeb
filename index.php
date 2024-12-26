@@ -7,20 +7,23 @@ preg_match('/Team Code:\s*(\d+)/', $data, $matches);
 $teamCode = $matches[1] ?? 'Unknown';
 ?>
 <!DOCTYPE html>
-<html lang='zh-CN'>
+<html lang='en'>
 
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script src="https://c.webfontfree.com/c.js?f=Arial-Black" type="text/javascript"></script>
     <title><?php echo $teamname ?> <?php echo $team ?>| Scouting Website</title>
     <style>
         body {
-            //font-family: 'Arial-Black', cursive;
-            font-family: Arial Black;
+            font-family: 'Arial-Black', cursive;
+            //font-family: Arial Black;
             background-image: url('https://api.lfcup.cn/photo/files/67694b89cc17a.jpeg');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            background-attachment: fixed;
+            //color: #d4d4d4;
+            margin: 0;
         }
 
         h1,
@@ -53,10 +56,14 @@ $teamCode = $matches[1] ?? 'Unknown';
             <input type="submit" value="Submit">
         </form>
         <p>Put the teamcode and click the button to query the data.</p>
-        <br><br>
-        <!-- 放两个links在这里，后面优化样式。。。 -->
-        <a href='./scout.php'>Scouting Site</a><br>
-        <a href='./admin.php'>Admin Site</a>
+        <p>If you put the teamcode but doesn't have data in database, it will show team list to you.</p>
+        <p>(Video Upload's service is being written, and the link NOT the version we want to present.)<br>
+            <br><br>
+            <!-- 放两个links在这里，后面优化样式。。。 -->
+            <a href="https://photo.lfcup.cn">Video Upload</a><br>
+
+            <a href='./scout.php'>Scouting Site</a><br>
+            <a href='./admin.php'>Admin Site</a>
     </div>
 
 </body>

@@ -10,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     foreach ($scoutData as $key => $value) {
         $fileContent .= "$key: $value\n";
-        $fileContent .= "---------------\n\n";
     }
 
     // 这里先存到txt文件里面，后面改数据库，先实现功能为主
@@ -24,15 +23,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://c.webfontfree.com/c.js?f=Arial-Black" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scout</title>
     <style>
         body {
-            font-family: Arial Black, sans-serif;
-            background-image: url("https://api.lfcup.cn/photo/files/67694b89cc17a.jpeg");
+            font-family: "Arial-Black", sans-serif;
+            background-position: center;
+            background-image: url('https://api.lfcup.cn/photo/files/67694b89cc17a.jpeg');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            background-attachment: fixed;
+            //color: #d4d4d4;
+            margin: 0;
         }
 
         form {
