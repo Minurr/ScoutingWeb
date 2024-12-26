@@ -6,6 +6,15 @@ $data = file_get_contents('scout_data.txt');
 preg_match('/Team Code:\s*(\d+)/', $data, $matches);
 $teamCode = $matches[1] ?? 'Unknown';
 ?>
+
+<!--
+
+一定要记得！！
+上线之前记得前后端分离！！！
+不然越写越臃肿！！！！
+结构也要优化，规范一点
+ 
+-->
 <!DOCTYPE html>
 <html lang='en'>
 
