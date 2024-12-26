@@ -1,4 +1,4 @@
-# Scouting
+# ScoutWeb
 FRC5516's scouting website for FRC/FTC
 
 Tips: its still writing, and the current version is only a semi-finished product
