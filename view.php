@@ -103,6 +103,7 @@ foreach ($matches as $teamCode => $matchList) {
 
 <body>
     <br>
+    <!-- 写的太恶心了，后面一定要优化。。，可以试试写类似之前FurChat的单页逻辑，不用php了 -->
     <div class='container'>
         <?php if ($teamParam && isset($teams[$teamParam])): ?>
             <h1>Scouting Data</h1>
