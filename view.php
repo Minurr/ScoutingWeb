@@ -42,9 +42,9 @@ foreach ($matches as $teamCode => $matchList) {
         if ($teamParam && $matchParam) {
             echo "Team $teamParam - $matchParam | FRC5516 Scouting";
         } elseif ($teamParam) {
-            echo "Team $teamParam | FRC5516 Scouting";
+            echo "Team $teamParam | Team$team Scouting";
         } else {
-            echo "All Teams | FRC5516 Scouting";
+            echo "All Teams | Team$team Scouting";
         }
         ?>
     </title>
