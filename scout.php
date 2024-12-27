@@ -3,10 +3,11 @@ include 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $teamCode = $_POST['team_code'] ?? '';
+    $matchCode = $_POST['match_code'] ?? '';
     $scoutData = $_POST['scout_data'] ?? [];
 
     $filename = "scout_data.txt";
-    $fileContent = "Team Code: $teamCode\n";
+    $fileContent = "Team Code: $teamCode\nMatch Code: $matchCode\n";
 
     foreach ($scoutData as $key => $value) {
         $fileContent .= "$key: $value\n";
@@ -40,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         form {
             background: rgba(255, 255, 255, 0.6);
-            border-radius: 8px;
+            //border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             max-width: 600px;
@@ -105,6 +106,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="form-section">
             <label for="team_code">Team Code:</label>
             <input type="text" id="team_code" name="team_code" required>
+            <br>
+            <label for="match_code">Match Code:</label>
+            <input type="text" id="match_code" name="match_code" required>
         </div>
         <hr><br>
         <!-- 变量显示 -->

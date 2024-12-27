@@ -46,7 +46,7 @@ $teamCode = $matches[1] ?? 'Unknown';
             margin: 0 auto;
             background: rgba(255, 255, 255, 0.64);
             padding: 20px;
-            border-radius: 10px;
+            //border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
@@ -66,10 +66,10 @@ $teamCode = $matches[1] ?? 'Unknown';
         </form>
         <p>Put the teamcode and click the button to query the data.</p>
         <p>If you put the teamcode but doesn't have data in database, it will show team list to you.</p>
-        <p>(Video Upload's service is being written, and the link NOT the version we want to present.)<br>
+        <!--<p>(Video Upload's service is being written, and the link NOT the version we want to present.)</p> --><br>
             <br><br>
             <!-- 放两个links在这里，后面优化样式。。。 -->
-            <a href="https://photo.lfcup.cn">Video Upload</a><br>
+            <a href="./video.php">Video Upload</a><br>
 
             <a href='./scout.php'>Scouting Site</a><br>
             <a href='./admin.php'>Admin Site</a>
