@@ -13,14 +13,14 @@ Now, videos can be uploaded to the corresponding API and bound with MatchCode fo
     PHP Version：≥7.4
     Nginx Version：＝1.24.0
 
-
+<br><hr>
 <footer>
     <div class="footer-content">
-        <div class="footer-logo">
-            <img src="https://api4.lfcup.cn/files/logo.png" alt="Logo" class="logo" size="30%">
-        </div>
         <div class="footer-sponsor">
-            <p>Server Sponsorship: <strong>炸鱼互联</strong></p>
+            <p>Server Sponsorship: </p>
+        </div>
+        <div class="footer-logo">
+            <img src="https://api4.lfcup.cn/files/logo2.png" alt="Logo" class="logo" width="200" height="auto">
         </div>
     </div>
 </footer>
