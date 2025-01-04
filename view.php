@@ -52,46 +52,181 @@ foreach ($videoLines as $line) {
 }
 
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Scout Data</title>
+    <title><?php echo $teamname ?> <?php echo $team ?> | SCOUT <?php echo $com_type ?></title>
+    <link href="./styles2.css" rel="stylesheet">
+    <link href="./styles3.css" rel="stylesheet">
     <style>
         body {
-            font-family: "Lato", "Regular 400 Italic";
-            background-image: url('https://api.lfcup.cn/photo/files/67694b89cc17a.jpeg');
+            background-color: #121212;
+            color: #eaeaea;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            text-transform: uppercase;
+        }
+
+        .hero-section {
+            background-image: url('https://api4.lfcup.cn/photo/bj.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0px auto;
-            background: rgba(37, 37, 38, 0.9);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+            padding: 50px;
+            border-radius: 20px;
             color: white;
+            margin: 8px;
         }
 
-        h1,
-        h2 {
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 8px;
+            backdrop-filter: blur(6px);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.04);
+        }
+
+        .button {
+            background-color: #FF5722;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #FF784E;
+        }
+
+        footer {
+            margin-top: 30px;
+            border-top: 2px solid #fff;
+            padding-top: 20px;
             text-align: center;
-            color: #dcdcdc;
         }
 
-        a {
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .footer-logo img {
+            max-width: 150px;
+        }
+
+        .footer-sponsor {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #ccc;
+        }
+        .inline-form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .inline-form label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e0e0e0;
+        }
+
+        .inline-form input[type="text"] {
+            flex: 1;
+            max-width: 300px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .inline-form input[type="text"]:focus {
+            background-color: #444;
+        }
+
+        .inline-form input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5e6f78;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .inline-form input[type="submit"]:hover {
+            background-color: #4a565f;
+        }
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e0e0e0;
+        }
+
+        input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus {
+            background-color: #444;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5e6f78;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4a565f;
+        }
+        .a2 {
             color: #3794ff;
             text-decoration: none;
         }
 
-        a:hover {
+        .a2:hover {
             text-decoration: underline;
         }
 
@@ -102,7 +237,7 @@ foreach ($videoLines as $line) {
             margin: 20px 0;
         }
 
-        p {
+        .p2 {
             line-height: 1.8;
             font-size: 16px;
             margin: 5px 0;
@@ -135,10 +270,25 @@ foreach ($videoLines as $line) {
     </style>
 </head>
 
-<body>
+<body class="dark">
+    <br>
+    <header class="text-center p-5">
+        <a href="./"><h1 class="text-4xl font-semibold"><?php echo $teamname ?> SCOUT</h1></a>
+        <form action="./view.php" class="inline-form">
+            <label for="team">Search Team:</label>
+            <input type="text" id="team" name="team" placeholder="114514">
+            <input type="submit" value="Submit">
+        </form>
+    </header>
+    <section class="hero-section">
+        <h2>F<?php echo $com_type ?>#<?php echo $team ?></h2>
+        <h2 class="text-2xl">欢迎来到 F<?php echo $com_type ?> 2025</h2>
+        <p>这里是<?php echo $teamname ?>的SCOUT网站，你可以在这里找到各种类型的数据和技巧、分类。</p>
+    </section>
     <div class="container">
         <?php if ($teamParam && isset($teams[$teamParam])): ?>
-            <h1>Scouting Data</h1><h2>for Team <?php echo htmlspecialchars($teamParam); ?></h2>
+            <br>
+            <h1 style="font-size: 26px;">Team <?php echo htmlspecialchars($teamParam); ?>'s Data</h1>
             <hr>
             <?php if ($matchParam && isset($teams[$teamParam][$matchParam])): ?>
                 <h2>Match: <?php echo htmlspecialchars($matchParam); ?></h2>
@@ -168,30 +318,49 @@ foreach ($videoLines as $line) {
                     echo "<video width='100%' controls><source src='" . htmlspecialchars($videos[$teamParam][$matchParam]) . "' type='video/mp4'>Your browser does not support the video tag.</video>";
                     ?>
                 </div>
-                <p><a href="./view.php?team=<?php echo urlencode($teamParam); ?>">Back to Team</a></p>
+                <p class="p2"><a class="a2" href="./view.php?team=<?php echo urlencode($teamParam); ?>">Back to Team</a></p>
             <?php else: ?>
-                <h2>Matches</h2>
+                <h2 style="font-size: 18px;">Matches List 比赛列表</h2>
                 <hr>
+                
                 <ul>
                     <?php
                     foreach ($teams[$teamParam] as $matchCode => $matchData): ?>
-                        <li><a href="./view.php?team=<?php echo urlencode($teamParam); ?>&match=<?php echo urlencode($matchCode); ?>"><?php echo htmlspecialchars($matchCode); ?></a></li>
+                        <li><a class="a2" href="./view.php?team=<?php echo urlencode($teamParam); ?>&match=<?php echo urlencode($matchCode); ?>"><?php echo "Match ".htmlspecialchars($matchCode); ?></a></li>
                     <?php endforeach; ?>
-                    <p><a href="./view.php">Back to All-Team</a></p>
+                    <hr>
+                    <p class="p2"><a class="a2" href="./view.php">Back to All-Team</a></p>
                 </ul>
             <?php endif; ?>
         <?php else: ?>
-            <h1>All Teams</h1>
+            <br>
+            <h1 style="font-size: 26px;">Team List 队伍列表</h1>
             <hr>
             <ul>
                 <?php
                 foreach ($teams as $teamCode => $matchList): ?>
-                    <li><a href="./view.php?team=<?php echo urlencode($teamCode); ?>">Team <?php echo htmlspecialchars($teamCode); ?></a></li>
+                    <li><a class="a2" href="./view.php?team=<?php echo urlencode($teamCode); ?>">Team <?php echo htmlspecialchars($teamCode); ?></a></li>
                 <?php endforeach; ?>
             </ul>
-            <p><a href="./">Back to Index</a></p>
         <?php endif; ?>
     </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-sponsor">
+                <b>
+                    <p class="p2">Sponsors 鸣谢赞助: </p>
+                </b>
+            </div>
+            <div class="footer-logo">
+                <a href="https://www.zyhost.cn/"><img src="https://api4.lfcup.cn/files/logo2.png" alt="Logo"
+                        class="logo" width="150" height="auto"></a>
+            </div>
+        </div>
+        <p>Current Server: Aliyun-Shanghai</p>
+    </footer>
+    <footer class="text-center p-5">
+        <p>Copyright &copy; 2025 IronMaple@Minur.</p>
+    </footer>
 </body>
 
 </html>
