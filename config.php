@@ -1,6 +1,7 @@
 <?php
 $team = '5516';
 $teamname = 'IronMaple';
+$com_type = 'RC';
 $variables = array (
   0 => 
   array (
@@ -60,13 +61,14 @@ $variables = array (
   ),
   6 => 
   array (
-    'name' => 'test2-select',
+    'name' => 'testtest-select',
     'type' => 'select',
     'options' => 
     array (
-      0 => 'f',
-      1 => 's',
-      2 => 't',
+      0 => '1',
+      1 => '2',
+      2 => '6',
+      3 => '12',
     ),
   ),
 );
