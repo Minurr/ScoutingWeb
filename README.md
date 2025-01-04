@@ -8,6 +8,8 @@ and search team code to query the scouting data of records. 10/23/2024
 
 Now, videos can be uploaded to the corresponding API and bound with MatchCode for display together. Meanwhile, the style of the data display section is easier for humans to read. 12/28/2024
 
+Now, the index page get big change. This is V1.0.0. I have comprehensively overturned, restructured, and optimized the UI and CSS styles of the website, rewritten the index layout, and unified the style of the entire site. The current version looks more beautiful. 01/05/2025
+
 
     Operating Environment
     PHP Version：≥7.4
