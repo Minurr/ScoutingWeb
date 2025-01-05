@@ -4,10 +4,11 @@ include 'config.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $teamCode = $_POST['team_code'] ?? '';
     $matchCode = $_POST['match_code'] ?? '';
+    $matchType = $_POST['match_type'] ?? '';
     $scoutData = $_POST['scout_data'] ?? [];
 
     $filename = "scout_data.txt";
-    $fileContent = "Team Code: $teamCode\nMatch Code: $matchCode\n";
+    $fileContent = "Team Code: $teamCode\nMatch Code: $matchCode\nMatch Type: $matchType\n";
 
     foreach ($scoutData as $key => $value) {
         $fileContent .= "$key: $value\n";
@@ -272,11 +273,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <form class="f1orm" method="POST">
         <div class="form-section">
-            <label for="team_code">Team Code:</label>
-            <input type="text" id="team_code" name="team_code" required>
-            <br>
-            <label for="match_code">Match Code:</label>
-            <input type="text" id="match_code" name="match_code" required>
+            <label for="team_code">Team Code:
+            <input type="text" id="team_code" name="team_code" required></label>
+
+            <label for="match_code">Match Type:
+            <input type="text" id="match_type" name="match_type" required></label>
+
+            <label for="match_code">Match Code:
+            <input type="number" id="match_code" name="match_code" required></label>
         </div>
         <hr><br>
         <!-- 变量显示 -->

@@ -277,7 +277,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div id="variables">
             <?php foreach ($variables as $index => $variable): ?>
                 <div class="variable">
-                    <label>Variable Name:<br></label>
+                    <label>Variable Name:</label>
                     <input type="text" name="variable_name[]" value="<?= htmlspecialchars($variable['name']) ?>" required /><br>
 
                     <label>Type:<br></label>
@@ -329,17 +329,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             const newVariable = `
         <div class="variable">
             <label>Variable Name:</label>
-            <input type="text" name="variable_name[]" required />
+            <input type="text" name="variable_name[]" required /><br>
 
             <label>Type:</label>
-            <select name="variable_type[]" data-index="${variableIndex}" onchange="updateOptions(this)" required>
-                <option value="number">Number</option>
-                <option value="select">Select</option>
+            <select style="color:black" name="variable_type[]" data-index="${variableIndex}" onchange="updateOptions(this)" required>
+                <option style="color:black" value="number">Number</option>
+                <option style="color:black" value="select">Select</option>
             </select>
 
             <div class="options-container" data-index="${variableIndex}" style="display: none;">
-                <label>Options:</label>
-                <button type="button" onclick="addOption(this, ${variableIndex})">Add Option</button>
+                <label>Options:</label><br>
+                <button type="button" onclick="addOption(this, ${variableIndex})">Add Option</button><br>
             </div>
 
             <button type="button" class="remove-button" onclick="removeVariable(this)">Remove Variable</button>

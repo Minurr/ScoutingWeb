@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $videoPath = isset($_POST['video_path']) ? $_POST['video_path'] : null;
 
     if (!$teamCode || !$matchCode || !$videoPath) {
-        $response = ['success' => false, 'message' => 'Team Code, Match Code, and Video Path are REQUIRED.'];
+        $response = ['success' => false, 'message' => 'REQUIRED.'];
         echo json_encode($response);
         exit;
     }

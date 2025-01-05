@@ -288,10 +288,10 @@ foreach ($videoLines as $line) {
     <div class="container">
         <?php if ($teamParam && isset($teams[$teamParam])): ?>
             <br>
-            <h1 style="font-size: 26px;">Team <?php echo htmlspecialchars($teamParam); ?>'s Data</h1>
+            <h1 style="font-size: 26px;">&nbsp;&nbsp;&nbsp;&nbsp;Team <?php echo htmlspecialchars($teamParam); ?>'s Data</h1>
             <hr>
             <?php if ($matchParam && isset($teams[$teamParam][$matchParam])): ?>
-                <h2>Match: <?php echo htmlspecialchars($matchParam); ?></h2>
+                <h2>&nbsp;&nbsp;&nbsp;&nbsp;Match <?php echo htmlspecialchars($matchParam); ?></h2>
                 <hr>
                 <div>
                     <table>
@@ -320,28 +320,28 @@ foreach ($videoLines as $line) {
                 </div>
                 <p class="p2"><a class="a2" href="./view.php?team=<?php echo urlencode($teamParam); ?>">Back to Team</a></p>
             <?php else: ?>
-                <h2 style="font-size: 18px;">Matches List 比赛列表</h2>
-                <hr>
+                <h2 style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;Matches List 比赛列表</h2><br>
                 
                 <ul>
                     <?php
                     foreach ($teams[$teamParam] as $matchCode => $matchData): ?>
-                        <li><a class="a2" href="./view.php?team=<?php echo urlencode($teamParam); ?>&match=<?php echo urlencode($matchCode); ?>"><?php echo "Match ".htmlspecialchars($matchCode); ?></a></li>
+                        <li><a class="a2" href="./view.php?team=<?php echo urlencode($teamParam); ?>&match=<?php echo urlencode($matchCode); ?>"><?php echo "&nbsp;&nbsp;&nbsp;&nbsp;Match ".htmlspecialchars($matchCode); ?></a></li>
                     <?php endforeach; ?>
                     <hr>
-                    <p class="p2"><a class="a2" href="./view.php">Back to All-Team</a></p>
+                    <p class="p2"><a class="a2" href="./view.php">&nbsp;Back to All-Team</a></p>
                 </ul>
             <?php endif; ?>
         <?php else: ?>
             <br>
-            <h1 style="font-size: 26px;">Team List 队伍列表</h1>
+            <h1 style="font-size: 26px;">&nbsp;&nbsp;&nbsp;&nbsp;Team List 队伍列表</h1>
             <hr>
             <ul>
                 <?php
                 foreach ($teams as $teamCode => $matchList): ?>
-                    <li><a class="a2" href="./view.php?team=<?php echo urlencode($teamCode); ?>">Team <?php echo htmlspecialchars($teamCode); ?></a></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<a class="a2" href="./view.php?team=<?php echo urlencode($teamCode); ?>">F<?php echo $com_type ?> #<?php echo htmlspecialchars($teamCode); ?></a></li>
                 <?php endforeach; ?>
             </ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <?php endif; ?>
     </div>
     <footer>

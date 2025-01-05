@@ -5,7 +5,7 @@ $com_type = 'RC';
 $variables = array (
   0 => 
   array (
-    'name' => '自动 Basket',
+    'name' => 'Auto L1 珊瑚',
     'type' => 'number',
     'options' => 
     array (
@@ -13,7 +13,7 @@ $variables = array (
   ),
   1 => 
   array (
-    'name' => '自动 Simple',
+    'name' => 'Auto L2 珊瑚',
     'type' => 'number',
     'options' => 
     array (
@@ -21,7 +21,7 @@ $variables = array (
   ),
   2 => 
   array (
-    'name' => '手动 Basket',
+    'name' => 'Auto L3 珊瑚',
     'type' => 'number',
     'options' => 
     array (
@@ -29,7 +29,7 @@ $variables = array (
   ),
   3 => 
   array (
-    'name' => '手动 Simple',
+    'name' => 'Auto L4 珊瑚',
     'type' => 'number',
     'options' => 
     array (
@@ -37,38 +37,78 @@ $variables = array (
   ),
   4 => 
   array (
-    'name' => '爬升',
-    'type' => 'select',
+    'name' => 'Auto 海藻 加工站',
+    'type' => 'number',
     'options' => 
     array (
-      0 => '无功能',
-      1 => '有功能但未实现',
-      2 => '一级爬升',
-      3 => '二级爬升',
-      4 => '三级爬升',
     ),
   ),
   5 => 
   array (
-    'name' => 'test1-select',
-    'type' => 'select',
+    'name' => 'Auto 海藻 收集网',
+    'type' => 'number',
     'options' => 
     array (
-      0 => '1',
-      1 => '2',
-      2 => '3',
     ),
   ),
   6 => 
   array (
-    'name' => 'testtest-select',
+    'name' => 'L1 珊瑚',
+    'type' => 'number',
+    'options' => 
+    array (
+    ),
+  ),
+  7 => 
+  array (
+    'name' => 'L2 珊瑚得分',
+    'type' => 'number',
+    'options' => 
+    array (
+    ),
+  ),
+  8 => 
+  array (
+    'name' => 'L3 珊瑚得分',
+    'type' => 'number',
+    'options' => 
+    array (
+    ),
+  ),
+  9 => 
+  array (
+    'name' => 'L4 珊瑚得分',
+    'type' => 'number',
+    'options' => 
+    array (
+    ),
+  ),
+  10 => 
+  array (
+    'name' => '海藻 加工站',
+    'type' => 'number',
+    'options' => 
+    array (
+    ),
+  ),
+  11 => 
+  array (
+    'name' => '海藻 收集网',
+    'type' => 'number',
+    'options' => 
+    array (
+    ),
+  ),
+  12 => 
+  array (
+    'name' => '驳船 爬升',
     'type' => 'select',
     'options' => 
     array (
-      0 => '1',
-      1 => '2',
-      2 => '6',
-      3 => '12',
+      0 => '浅吊笼',
+      1 => '深吊笼',
+      2 => '无结构，没爬升',
+      3 => '有结构，没爬升',
     ),
   ),
 );
