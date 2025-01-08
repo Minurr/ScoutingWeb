@@ -51,6 +51,63 @@ foreach ($videoLines as $line) {
     }
 }
 
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+    header('Content-Type: application/json');
+
+    define('OPENAI_API_KEY', '[你的key]');
+    if (isset($_POST['action']) && $_POST['action'] === 'analyze') {
+        $filePath = 'scout_data.txt';
+
+        if (!file_exists($filePath)) {
+            echo json_encode(['success' => false, 'message' => 'Data file not found.']);
+            exit;
+        }
+
+        $fileContent = file_get_contents($filePath);
+
+        $apiUrl = "https://api.openai.com/v1/chat/completions";
+        $data = [
+            "model" => "gpt-4o-mini",
+            "messages" => [
+                [
+                    "role" => "system",
+                    "content" => "You are a data analyst specialized in sports performance analysis."
+                ],
+                [
+                    "role" => "user",
+                    "content" => "Here is the scout data of multiple teams:\n\n$fileContent\n\nAnalyze the strengths and weaknesses of each team and return the results in a table format. make table well-formatted, you must should show it in html, and make a table with html/css tags. Our team is 5516. Analyze which team we should choose for the alliance and mark out.must not use markdown.just feedback me html, dont use ```html xxx ``` or else.Let the strong team match 5516 to make up for the weaknesses of 5516.Provide certain data when showing weaknesses and strengths,表格紧凑，内容多，分两个表格，第一个显示全部队伍的数据，然后第二个显示优点和缺点还有5516应该选择哪一个队伍当5516的联盟队友，还有理由，理由粗体写在两个表格上面的空白，深色模式深色模式，使用font-family: 'Poppins', sans-serif;，尽量使用中文，不要使用任何markdown文本，html内容也不需要用md文本[```html xxx ``` ]标注，不要css设置background，我用的是嵌入你的结果给我的网站"
+                ]
+            ]
+        ];
+
+        $ch = curl_init($apiUrl);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'Content-Type: application/json',
+            'Authorization: Bearer ' . OPENAI_API_KEY
+        ]);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+
+        $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($httpCode === 200) {
+            $responseData = json_decode($response, true);
+            $analysis = $responseData['choices'][0]['message']['content'];
+            echo json_encode(['success' => true, 'analysis' => $analysis]);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Failed to fetch analysis.', 'details' => $response]);
+        }
+        exit;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +116,8 @@ foreach ($videoLines as $line) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="favicon.ico">
     <title><?php echo $teamname ?> <?php echo $team ?> | SCOUT <?php echo $com_type ?></title>
     <link href="./styles2.css" rel="stylesheet">
     <link href="./styles3.css" rel="stylesheet">
@@ -74,7 +133,7 @@ foreach ($videoLines as $line) {
         }
 
         .hero-section {
-            background-image: url('https://api4.lfcup.cn/photo/bj.jpg');
+            background-image: url('https://api.lfcup.cn/photo/files/677bb07f3a332.webp');
             background-size: cover;
             background-position: center;
             backdrop-filter: blur(8px);
@@ -266,7 +325,14 @@ foreach ($videoLines as $line) {
         td strong {
             color: #dcdcdc;
         }
-
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background:rgba(0, 0, 0, 0.34);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -333,7 +399,11 @@ foreach ($videoLines as $line) {
             <?php endif; ?>
         <?php else: ?>
             <br>
-            <h1 style="font-size: 26px;">&nbsp;&nbsp;&nbsp;&nbsp;Team List 队伍列表</h1>
+            <h1 style="font-size: 26px;">&nbsp;&nbsp;&nbsp;&nbsp;Team List 队伍列表</h1>    
+            <div class="container">
+                <button id="analyzeButton"><p style="color: #FF5722">点击分析队伍数据</p></button>
+                    <div id="output" class="output"></div>
+            </div>
             <hr>
             <ul>
                 <?php
@@ -361,6 +431,29 @@ foreach ($videoLines as $line) {
     <footer class="text-center p-5">
         <p>Copyright &copy; 2025 IronMaple@Minur.</p>
     </footer>
+    <script>
+        document.getElementById('analyzeButton').addEventListener('click', function() {
+            const output = document.getElementById('output');
+            output.textContent = "IronMaple-AI分析数据中，请稍后...";
+
+            fetch('', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'action=analyze'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    output.innerHTML = data.analysis;
+                } else {
+                    output.innerHTML = `<span class="error">Error: ${data.message}</span>`;
+                }
+            })
+            .catch(error => {
+                output.innerHTML = `<span class="error">An unexpected error occurred: ${error}</span>`;
+            });
+        });
+    </script>
 </body>
 
 </html>
