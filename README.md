@@ -27,7 +27,7 @@ Now, intelligent models can be used to analyze existing data, automatically prov
 <footer>
     <div class="footer-content">
         <div class="footer-sponsor">
-            <p>Server Sponsorship: </p>
+            <p>Server Sponsorship 服务器赞助 : </p>
         </div>
         <div class="footer-logo">
             <img src="https://api4.lfcup.cn/files/logo2.png" alt="Logo" class="logo" width="200" height="auto">
