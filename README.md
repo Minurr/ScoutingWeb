@@ -10,6 +10,8 @@ Now, videos can be uploaded to the corresponding API and bound with MatchCode fo
 
 Now, the index page get big change. This is V1.0.0. I have comprehensively overturned, restructured, and optimized the UI and CSS styles of the website, rewritten the index layout, and unified the style of the entire site. The current version looks more beautiful. 01/05/2025
 
+Now, intelligent models can be used to analyze existing data, automatically providing tables for all teams and alliance analysis suggestions. 01/07/2025
+
 
     Operating Environment
     PHP Version：≥7.4
