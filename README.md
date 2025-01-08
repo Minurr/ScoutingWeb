@@ -1,4 +1,4 @@
-# ScoutWeb
+# ScoutWeb 侦察网页
 FRC5516's scouting website for FRC/FTC
 <br>FRC5516的scouting网站用于FRC/FTC
 
