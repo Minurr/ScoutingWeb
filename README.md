@@ -17,6 +17,7 @@ Now, the index page get big change. This is V1.0.0. I have comprehensively overt
 
 Now, intelligent models can be used to analyze existing data, automatically providing tables for all teams and alliance analysis suggestions. 01/07/2025<br>
 现在，可以使用智能模型分析现有数据，自动为所有团队和联盟提供分析表格和建议。2025年1月7日
+<br>
 
     Operating Environment
     PHP Version：≥7.4
