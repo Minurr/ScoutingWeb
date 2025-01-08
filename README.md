@@ -23,7 +23,7 @@ Now, intelligent models can be used to analyze existing data, automatically prov
     PHP Version：≥7.4
     Nginx Version：＝1.24.0
 
-<br><hr>
+<hr>
 <footer>
     <div class="footer-content">
         <div class="footer-sponsor">
