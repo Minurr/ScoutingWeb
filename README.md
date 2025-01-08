@@ -1,7 +1,7 @@
 # ScoutWeb
 FRC5516's scouting website for FRC/FTC
 
-Tips: its still writing, and the current version is only a semi-finished product
+Tips: its still writing, but as of now, the basic functions and some additional functions have been completed.
 
 Now, it can set variables and let scouting mumbers to upload data.
 and search team code to query the scouting data of records. 10/23/2024
