@@ -61,7 +61,7 @@ $variables = array (
   ),
   7 => 
   array (
-    'name' => 'L2 珊瑚得分',
+    'name' => 'L2 珊瑚',
     'type' => 'number',
     'options' => 
     array (
@@ -69,7 +69,7 @@ $variables = array (
   ),
   8 => 
   array (
-    'name' => 'L3 珊瑚得分',
+    'name' => 'L3 珊瑚',
     'type' => 'number',
     'options' => 
     array (
@@ -77,7 +77,7 @@ $variables = array (
   ),
   9 => 
   array (
-    'name' => 'L4 珊瑚得分',
+    'name' => 'L4 珊瑚',
     'type' => 'number',
     'options' => 
     array (
