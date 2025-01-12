@@ -13,6 +13,8 @@ Now, the index page get big change. This is V1.0.0. I have comprehensively overt
 Now, intelligent models can be used to analyze existing data, automatically providing tables for all teams and alliance analysis suggestions. 01/07/2025
 
 Now, I have changed the directory structure, and now it is clearer. Footer and header are separately arranged for unified modification. 01/11/2025
+
+Now, we have added a user system, by grouping users, we can accurately assign tasks, check if there are enough permissions, etc.; we use REG-code to avoid unrelated people from registering, and to avoid cyber-attacks, and this is our v2.0.0 version, and I'm proud of it! 01/12/2025
 <br>
 
     Operating Environment
