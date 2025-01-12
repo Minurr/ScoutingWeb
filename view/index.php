@@ -2,7 +2,7 @@
 include '../config.php';
 
 
-$data = file_get_contents('../resourse/data/scout_data.txt');
+$data = file_get_contents('../resource/data/scout_data.txt');
 $teamParam = $_GET['team'] ?? null;
 $matchParam = $_GET['match'] ?? null;
 
@@ -29,7 +29,7 @@ foreach ($lines as $line) {
 }
 
 // nm的这个bug我修了一个小时，12/28/2024 12:28AM修好留念。
-$videoData = file_get_contents('../resourse/data/scout_video.txt');
+$videoData = file_get_contents('../resource/data/scout_video.txt');
 $videoLines = explode("\n", $videoData);
 $videos = [];
 $currentTeam = null;
@@ -61,9 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     header('Content-Type: application/json');
 
-    define('OPENAI_API_KEY', 'YOUR KEY');
+    define('OPENAI_API_KEY', 'xxxx');
     if (isset($_POST['action']) && $_POST['action'] === 'analyze') {
-        $filePath = '../resourse/data/scout_data.txt';
+        $filePath = '../resource/data/scout_data.txt';
 
         if (!file_exists($filePath)) {
             echo json_encode(['success' => false, 'message' => 'Data file not found.']);
@@ -125,7 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="../css/styles3.css" rel="stylesheet">
     <link href="../css/styles4.css" rel="stylesheet">
     <link href="../css/v_styles.css" rel="stylesheet">
-    <script type="text/javascript" src="../js/ai_script.js"></script>
 </head>
 
 <body class="dark">
@@ -185,6 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h1 style="font-size: 26px;">&nbsp;&nbsp;&nbsp;&nbsp;Team List 队伍列表</h1>
             <div class="container">
                 <button id="analyzeButton">
+                    
                     <p style="color: #FF5722">点击分析队伍数据</p>
                 </button>
                 <div id="output" class="output"></div>
@@ -202,29 +202,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
     </div>
     <?php include '../unify/footer.php'; ?>
-<script>
-    document.getElementById('analyzeButton').addEventListener('click', function () {
-    const output = document.getElementById('output');
-    output.textContent = "IronMaple-AI分析数据中，请稍后...";
-
-    fetch('', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: 'action=analyze'
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                output.innerHTML = data.analysis;
-            } else {
-                output.innerHTML = `<span class="error">Error: ${data.message}</span>`;
-            }
-        })
-        .catch(error => {
-            output.innerHTML = `<span class="error">An unexpected error occurred: ${error}</span>`;
-        });
-});
-</script>
+    <script><?php include '../js/ai_script.js'; ?></script>
 </body>
 
 </html>

@@ -6,7 +6,8 @@
             </b>
         </div>
         <div class="footer-logo">
-            <a href="https://www.zyhost.cn/"><img src="https://api4.lfcup.cn/files/logo2.png" alt="Logo" class="logo" width="150" height="auto"></a>
+            <a href="https://www.zyhost.cn/"><img src="https://api4.lfcup.cn/files/logo2.png" alt="Logo" class="logo"
+                    width="150" height="auto"></a>
         </div>
     </div>
     <p>Current Server: Aliyun-Shanghai</p>
@@ -16,12 +17,20 @@
 </footer>
 <div class="menu-container">
     <button class="circle-button" onclick="toggleMenu()">
-        <img src="../resourse/5516logo.jpg" alt="Logo">
+        <img src="/resource/5516logo.jpg" alt="Logo">
     </button>
     <div class="menu" id="menu">
         <ul>
-            <li><a href="/login">Login</a></li>
-            <li><a href="#">114514</a></li>
+            <li>
+                <?php if (isset($_SESSION['username'])): ?>
+                    <strong>
+                        <p style="color:black"><?php echo htmlspecialchars($_SESSION['username']); ?></p>
+                    </strong>
+                <?php else: ?>
+                    <a href="/login">LOGIN!!!</a>
+                <?php endif; ?>
+            </li>
+            <li><a href="/profile">Profile</a></li>
         </ul>
     </div>
 </div>

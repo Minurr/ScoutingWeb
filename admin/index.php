@@ -1,5 +1,8 @@
 <?php
+session_start();
 include '../config.php';
+include './permissions.php';
+checkPermission('管理员');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $team = $_POST['team'] ?? '';

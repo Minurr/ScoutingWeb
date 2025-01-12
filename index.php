@@ -1,7 +1,8 @@
 <?php
+session_start();
 include 'config.php';
 
-$data = file_get_contents('./resourse/data/scout_data.txt');
+$data = file_get_contents('./resource/data/scout_data.txt');
 
 preg_match('/Team Code:\s*(\d+)/', $data, $matches);
 $teamCode = $matches[1] ?? 'Unknown';

@@ -1,5 +1,9 @@
 <?php
+session_start();
 include '../config.php';
+include '../permissions.php';
+checkPermission(['媒体组','管理员','外联组']);
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $teamCode = isset($_POST['team_code']) ? $_POST['team_code'] : null;
@@ -12,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $scoutVideoFile = '../rescourse/data/scout_video.txt';
+    $scoutVideoFile = '../resource/data/scout_video.txt';
     $videoData = "Team Code: $teamCode\nMatch Code: $matchCode\nVideo Path: $videoPath\n\n";
 
     if (file_put_contents($scoutVideoFile, $videoData, FILE_APPEND)) {
@@ -36,14 +40,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" sizes="16x16 32x32 64x64" href="favicon.ico">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../favicon.ico">
     <title><?php echo $teamname ?> <?php echo $team ?> | Video Upload</title>
     <link href="../css/styles2.css" rel="stylesheet">
     <link href="../css/styles3.css" rel="stylesheet">
     <link href="../css/styles4.css" rel="stylesheet">
     <link href="../css/vdo_styles.css" rel="stylesheet">
-    <script type="text/javascript" src="../js/v_script.js"></script>
+    
     
 </head>
 
@@ -61,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <label for="video_file">Upload Video:</label>
             <input type="file" id="video_file" name="video" accept="video/*" required><br><br>
-
+            <script type="text/javascript" src="../js/v_script.js"></script>
             <button type="submit" class="button">Upload Video</button><br><br>
         </form>
 
@@ -74,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div id="responseMessage"></div>
     </div>
     <?php include '../unify/footer.php'; ?>
-
+    
 </body>
 
 </html>

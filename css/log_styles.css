@@ -1,0 +1,162 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全局字体和背景 */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #121212;
+    color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* 头部样式 */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #bbb;
+    font-size: 1rem;
+}
+
+/* 卡片布局 */
+.card {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.card a.button {
+    display: inline-block;
+    background-color: #0f8f3f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.card a.button:hover {
+    background-color: #089f3d;
+}
+
+/* 网格布局 */
+section {
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card a.button {
+        font-size: 0.9rem;
+    }
+}
+
+/* 按钮样式 */
+.button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* 处理暗黑模式 */
+body.dark {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+body.dark header {
+    background-color: #1e1e1e;
+}
+
+body.dark .card {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+}
+
+body.dark .card a.button {
+    background-color: #0f8f3f;
+}
+
+body.dark .card a.button:hover {
+    background-color: #089f3d;
+}

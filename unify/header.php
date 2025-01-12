@@ -3,7 +3,7 @@
     <a href="/">
         <h1 class="text-4xl font-semibold"><?php echo $teamname ?> SCOUT</h1>
     </a>
-    <form action="../view" class="inline-form">
+    <form action="./view" class="inline-form">
         <label for="team">Search Team:</label>
         <input type="text" id="team" name="team" placeholder="114514">
         <input type="submit" value="Submit">

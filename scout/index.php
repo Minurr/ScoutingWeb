@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../config.php';
  
 
@@ -8,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $matchType = $_POST['match_type'] ?? '';
     $scoutData = $_POST['scout_data'] ?? [];
 
-    $filename = "../rescourse/data/scout_data.txt";
+    $filename = "../resource/data/scout_data.txt";
     $fileContent = "Team Code: $teamCode\nMatch Code: $matchCode\nMatch Type: $matchType\n";
 
     foreach ($scoutData as $key => $value) {
