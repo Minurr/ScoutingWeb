@@ -15,6 +15,8 @@ Now, intelligent models can be used to analyze existing data, automatically prov
 Now, I have changed the directory structure, and now it is clearer. Footer and header are separately arranged for unified modification. 01/11/2025
 
 Now, we have added a user system, by grouping users, we can accurately assign tasks, check if there are enough permissions, etc.; we use REG-code to avoid unrelated people from registering, and to avoid cyber-attacks, and this is our v2.0.0 version, and I'm proud of it! 01/12/2025
+
+Now, I fixed various problems with the site, added a new user management system for easy visual management; updated the UI to resemble the google material you style as much as possible, and the theme colors are refreshing. 01/19/2025
 <br>
 
     Operating Environment
