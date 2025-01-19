@@ -10,9 +10,14 @@
     <title><?php echo $teamname ?> <?php echo $team ?> | LOGIN</title>
     <link href="../css/styles2.css" rel="stylesheet">
     <link href="../css/styles3.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/styles4.css" rel="stylesheet">
     <link href="../css/lo_styles.css" rel="stylesheet">
     <script type="text/javascript" src="../js/log_script.js"></script>
+    <script src="https://unpkg.com/sober/dist/sober.min.js"></script>
+    <script>
+    console.log(sober)
+    </script>
 </head>
 
 <body class="dark">

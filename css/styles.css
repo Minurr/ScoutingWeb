@@ -1,11 +1,17 @@
 body {
-    background-color: #121212;
+    background-color: rgb(0, 20, 24);
     color: #eaeaea;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 h1 {
     text-transform: uppercase;
+    color: rgb(225, 249, 255);
+}
+
+h2, p, h3 {
+    color: rgb(225, 249, 255);
 }
 
 .hero-section {
@@ -15,39 +21,40 @@ h1 {
     backdrop-filter: blur(8px);
     padding: 50px;
     border-radius: 20px;
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 8px;
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(37, 66, 73, 0.533);
     border-radius: 12px;
     padding: 30px;
     margin: 8px;
+    color: white;
     backdrop-filter: blur(6px);
     transition: transform 0.3s;
 }
 
 .card:hover {
+    background-color: rgb(82, 173, 190);
     transform: scale(1.04);
+    color: rgb(0, 54, 65);
 }
 
 .button {
-    background-color: #FF5722;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    background-color: rgb(85, 212, 243);
+    color: rgb(0, 54, 65);
+
 }
 
 .button:hover {
-    background-color: #FF784E;
+    background-color: rgb(0, 54, 65);
+    color: rgb(86, 214, 234);
 }
 
 footer {
     margin-top: 30px;
-    border-top: 2px solid #fff;
+    border-top: 3.5px solid rgba(76, 109, 117, 0.533);
     padding-top: 20px;
     text-align: center;
 }
@@ -67,7 +74,7 @@ footer {
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 18px;
-    color: #ccc;
+    color: rgb(192, 242, 255);
 }
 .inline-form {
     display: flex;
@@ -80,39 +87,41 @@ footer {
 .inline-form label {
     font-size: 16px;
     font-weight: bold;
-    color: #e0e0e0;
 }
 
 .inline-form input[type="text"] {
     flex: 1;
     max-width: 300px;
+    margin-left: 20px;
     padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    background-color: #333;
-    color: #fff;
+    color: rgb(192, 242, 255);
     outline: none;
     transition: all 0.3s;
+    caret-color: #56D6F5;
+    background-color: rgb(39, 67, 74);
 }
 
 .inline-form input[type="text"]:focus {
-    background-color: #444;
+    background-color: rgb(208, 245, 255);
 }
 
 .inline-form input[type="submit"] {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #5e6f78;
-    color: white;
+    background-color: rgb(85, 212, 243);
+    color: rgb(0, 54, 65);
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .inline-form input[type="submit"]:hover {
-    background-color: #4a565f;
+    background-color: rgb(0, 54, 65);
+    color: rgb(86, 214, 234);
 }
 form {
     margin-top: 20px;
@@ -125,20 +134,22 @@ label {
 }
 
 input[type="text"] {
-    width: 60%;
+    flex: 1;
+    max-width: 300px;
     padding: 10px;
-    margin-top: 10px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    background-color: #333;
-    color: #fff;
+    color: rgb(208, 245, 255);
     outline: none;
     transition: all 0.3s;
+    caret-color: #56D6F5;
+    background-color: rgb(39, 67, 74);
 }
 
 input[type="text"]:focus {
-    background-color: #444;
+    background-color: rgb(208, 245, 255);
+    color: rgb(10, 37, 44);
 }
 
 input[type="submit"] {
@@ -146,13 +157,14 @@ input[type="submit"] {
     margin-top: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #5e6f78;
-    color: white;
+    background-color: rgb(85, 212, 243);
+    color: rgb(0, 54, 65);
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #4a565f;
+    background-color: rgb(0, 54, 65);
+    color: rgb(86, 214, 234);
 }

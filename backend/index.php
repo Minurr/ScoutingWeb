@@ -1,10 +1,8 @@
 <?php
-// backend.php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'];
 
-    // 注册功能
     if ($action === 'register') {
         $username = $_POST['username'];
         $email = $_POST['email'];
@@ -13,7 +11,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $reg_code = $_POST['reg_code'];
 
         if (verifyRegCode($reg_code)) {
-            // 这里将用户数据追加到文件中
+            $users = file('../resource/data/users.txt');
+            foreach ($users as $user) {
+                list($storedUsername, $storedEmail, $storedPassword, $storedGroup) = explode(',', trim($user));
+                if ($username === $storedUsername) {
+                    echo json_encode(['success' => false, 'message' => 'Username already exists!']);
+                    exit;
+                }
+                if (strtolower($email) === strtolower($storedEmail)) {
+                    echo json_encode(['success' => false, 'message' => 'Email already registered!']);
+                    exit;
+                }
+            }
+
+            if (strlen($username) <= 4) {
+                echo json_encode(['success' => false, 'message' => 'Username must be longer than 4 characters!']);
+                exit;
+            }
+
+            if (strlen($password) <= 9) {
+                echo json_encode(['success' => false, 'message' => 'Password must be longer than 9 characters!']);
+                exit;
+            }
+
+            if (!preg_match('/[a-z]/', $password) || !preg_match('/[A-Z]/', $password)) {
+                echo json_encode(['success' => false, 'message' => 'Password must contain both uppercase and lowercase letters!']);
+                exit;
+            }
+
             $data = "$username,$email,$password,$group\n";
             file_put_contents('../resource/data/users.txt', $data, FILE_APPEND);
             echo json_encode(['success' => true, 'message' => 'Registration successful!']);
@@ -22,7 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // 登录功能
     if ($action === 'login') {
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -30,10 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         foreach ($users as $user) {
             list($storedUsername, $storedEmail, $storedPassword, $storedGroup) = explode(',', trim($user));
-            if ($email === $storedEmail && $password === $storedPassword) {
+            if (strtolower($email) === strtolower($storedEmail) && $password === $storedPassword) {
                 session_start();
                 $_SESSION['username'] = $storedUsername;
-                $_SESSION['email'] = $storedEmail;
+                $_SESSION['email'] = $storedEmail; // Store the original email format in session
                 $_SESSION['group'] = $storedGroup;
                 echo json_encode(['success' => true, 'message' => 'Login successful!']);
                 exit;
@@ -43,9 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// 验证注册代码的函数
 function verifyRegCode($reg_code) {
-    $valid_codes = ['REG2025']; // 这里可以添加更多有效的注册代码
+    $valid_codes = ['IronMaple_5516_SCOUT_0x1s5kjdl'];
     return in_array($reg_code, $valid_codes);
 }
 ?>

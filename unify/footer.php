@@ -16,23 +16,25 @@
     <p>Copyright &copy; 2025 IronMaple@Minur.</p>
 </footer>
 <div class="menu-container">
-    <button class="circle-button" onclick="toggleMenu()">
-        <img src="/resource/5516logo.jpg" alt="Logo">
-    </button>
+    <s-fab>
+        <s-icon onclick="toggleMenu()"><img src="/resource/5516logo.jpg" alt="Logo"></s-icon>
+    </s-fab>
     <div class="menu" id="menu">
         <ul>
             <li>
                 <?php if (isset($_SESSION['username'])): ?>
                     <strong>
-                        <p style="color:black"><?php echo htmlspecialchars($_SESSION['username']); ?></p>
+                        <p style="color:rgb(0, 0, 0)"><?php echo htmlspecialchars($_SESSION['username']); ?></p>
                     </strong>
                 <?php else: ?>
                     <a href="/login">LOGIN!!!</a>
                 <?php endif; ?>
             </li>
             <li><a href="/profile">Profile</a></li>
+            <li><a href="/user">Admin</a></li>
         </ul>
     </div>
+
 </div>
 
 <script>

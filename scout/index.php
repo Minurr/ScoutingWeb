@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <link rel="shortcut icon" href="/favicon.ico">
     <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
     <title><?php echo $teamname ?> <?php echo $team ?> | SCOUTING</title>
+    <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/styles2.css" rel="stylesheet">
     <link href="../css/styles3.css" rel="stylesheet">
     <link href="../css/styles4.css" rel="stylesheet">

@@ -75,12 +75,13 @@ $teamCode = $matches[1] ?? 'Unknown';
         </header>
         <main>
             <section class="profile-section">
-                    <img src="https://api.lfcup.cn/photo/files/67835d0c3b1c3.png" alt="Default Avatar">
+                    <img src="https://api.lfcup.cn/photo/files/6783c14824306.png" alt="Default Avatar">
                     <div class="profile-info">
                         <p><strong>Name:</strong> <?php echo htmlspecialchars($_SESSION['username']); ?></p>
                         <p><strong>Email:</strong> <?php echo htmlspecialchars($_SESSION['email']); ?></p>
                         <p><strong>Group:</strong> <?php echo htmlspecialchars($_SESSION['group']); ?></p>
                         <button onclick="logout()">Logout</button>
+                        <button style="background-color:#177cb0"><a href="../user/name.php">Change</a></button>
                     </div>
             </section>
         </main>

@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     header('Content-Type: application/json');
 
-    define('OPENAI_API_KEY', 'xxxx');
+    define('OPENAI_API_KEY', 's');
     if (isset($_POST['action']) && $_POST['action'] === 'analyze') {
         $filePath = '../resource/data/scout_data.txt';
 
@@ -72,9 +72,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $fileContent = file_get_contents($filePath);
 
-        $apiUrl = "xxx";
+        $apiUrl = "https://ap/completions";
         $data = [
-            "model" => "gpt-4o-mini",
+            "model" => "gemini-exp-1121",
             "messages" => [
                 [
                     "role" => "system",
@@ -82,8 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ],
                 [
                     "role" => "user",
-                    "content" => "Here is the scout data of multiple teams:\n\n$fileContent\n\nAnalyze the strengths and weaknesses of each team and return the results in a table format. make table well-formatted, you must should show it in html, and make a table with html/css tags. Our team is 5516. Analyze which team we should choose for the alliance and mark out.must not use markdown.just feedback me html, dont use ```html xxx ``` or else.Let the strong team match 5516 to make up for the weaknesses of 5516.Provide certain data when showing weaknesses and strengths,表格紧凑，内容多，分两个表格，第一个显示全部队伍的数据，然后第二个显示优点和缺点还有5516应该选择哪一个队伍当5516的联盟队友，还有理由，理由粗体写在两个表格上面的空白，深色模式深色模式，使用font-family: 'Poppins', sans-serif;，尽量使用中文，不要使用任何markdown文本，html内容也不需要用md文本[```html xxx ``` ]标注，不要css设置background，我用的是嵌入你的结果给我的网站"
-                ]
+                    "content" => ""                ]
             ]
         ];
 
@@ -122,6 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="icon" sizes="16x16 32x32 64x64" href="../favicon.ico">
     <title><?php echo $teamname ?> <?php echo $team ?> | SCOUT <?php echo $com_type ?></title>
     <link href="../css/styles2.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/styles3.css" rel="stylesheet">
     <link href="../css/styles4.css" rel="stylesheet">
     <link href="../css/v_styles.css" rel="stylesheet">
@@ -182,7 +182,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php else: ?>
             <br>
             <h1 style="font-size: 26px;">&nbsp;&nbsp;&nbsp;&nbsp;Team List 队伍列表</h1>
-            <div class="container">
+            <br>
+            <div class="container2">
                 <button id="analyzeButton">
                     
                     <p style="color: #FF5722">点击分析队伍数据</p>
@@ -203,6 +204,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <?php include '../unify/footer.php'; ?>
     <script><?php include '../js/ai_script.js'; ?></script>
+
 </body>
 
 </html>

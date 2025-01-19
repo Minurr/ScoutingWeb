@@ -1,0 +1,112 @@
+Team Code: 9999
+Match Code: 1
+Match Type: Playoff
+Auto L1 珊瑚: 2
+Auto L2 珊瑚: 1
+Auto L3 珊瑚: 0
+Auto L4 珊瑚: 0
+Auto 海藻 加工站: 1
+Auto 海藻 收集网: 2
+L1 珊瑚: 4
+L2 珊瑚: 7
+L3 珊瑚: 0
+L4 珊瑚: 0
+海藻 加工站: 3
+海藻 收集网: 6
+驳船 爬升: 浅吊笼
+Team Code: 5516
+Match Code: 1
+Match Type: Playoff
+Auto L1 珊瑚: 4
+Auto L2 珊瑚: 5
+Auto L3 珊瑚: 0
+Auto L4 珊瑚: 0
+Auto 海藻 加工站: 1
+Auto 海藻 收集网: 3
+L1 珊瑚: 2
+L2 珊瑚: 1
+L3 珊瑚: 7
+L4 珊瑚: 8
+海藻 加工站: 2
+海藻 收集网: 6
+驳船 爬升: 深吊笼
+Team Code: 2222
+Match Code: 1
+Match Type: Playoff
+Auto L1 珊瑚: 2
+Auto L2 珊瑚: 1
+Auto L3 珊瑚: 2
+Auto L4 珊瑚: 1
+Auto 海藻 加工站: 1
+Auto 海藻 收集网: 3
+L1 珊瑚: 2
+L2 珊瑚: 1
+L3 珊瑚: 2
+L4 珊瑚: 3
+海藻 加工站: 2
+海藻 收集网: 1
+驳船 爬升: 浅吊笼
+Team Code: 1145
+Match Code: 1
+Match Type: Playoff
+Auto L1 珊瑚: 9
+Auto L2 珊瑚: 8
+Auto L3 珊瑚: 0
+Auto L4 珊瑚: 0
+Auto 海藻 加工站: 1
+Auto 海藻 收集网: 3
+L1 珊瑚: 7
+L2 珊瑚: 1
+L3 珊瑚: 6
+L4 珊瑚: 5
+海藻 加工站: 2
+海藻 收集网: 3
+驳船 爬升: 深吊笼
+Team Code: 4444
+Match Code: 1
+Match Type: 1
+Auto L1 珊瑚: 1
+Auto L2 珊瑚: 2
+Auto L3 珊瑚: 0
+Auto L4 珊瑚: 5
+Auto 海藻 加工站: 1
+Auto 海藻 收集网: 2
+L1 珊瑚: 1
+L2 珊瑚: 1
+L3 珊瑚: 1
+L4 珊瑚: 2
+海藻 加工站: 6
+海藻 收集网: 8
+驳船 爬升: 深吊笼
+Team Code: 9999
+Match Code: 2
+Match Type: Playoff
+Auto L1 珊瑚: 2
+Auto L2 珊瑚: 1
+Auto L3 珊瑚: 0
+Auto L4 珊瑚: 0
+Auto 海藻 加工站: 1
+Auto 海藻 收集网: 2
+L1 珊瑚: 4
+L2 珊瑚: 7
+L3 珊瑚: 0
+L4 珊瑚: 0
+海藻 加工站: 3
+海藻 收集网: 6
+驳船 爬升: 浅吊笼
+Team Code: 2025
+Match Code: 1
+Match Type: Playoff
+Auto L1 珊瑚: 1
+Auto L2 珊瑚: 2
+Auto L3 珊瑚: 1
+Auto L4 珊瑚: 4
+Auto 海藻 加工站: 1
+Auto 海藻 收集网: 1
+L1 珊瑚: 2
+L2 珊瑚: 5
+L3 珊瑚: 4
+L4 珊瑚: 2
+海藻 加工站: 1
+海藻 收集网: 3
+驳船 爬升: 浅吊笼

@@ -1,7 +1,6 @@
-document.getElementById('uploadForm').addEventListener('submit', function(event) {
+document.getElementById('uploadForm').addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    const formData = new FormData();
     const teamCode = document.getElementById('team_code').value;
     const matchCode = document.getElementById('match_code').value;
     const videoFile = document.getElementById('video_file').files[0];
@@ -11,9 +10,13 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
         return;
     }
 
+    // Compress video
+    const compressedVideoFile = await compressVideo(videoFile);
+
+    const formData = new FormData();
     formData.append('team_code', teamCode);
     formData.append('match_code', matchCode);
-    formData.append('video', videoFile);
+    formData.append('video', compressedVideoFile);
     const progressContainer = document.querySelector('.progress-container');
     const progressBar = document.querySelector('.progress-bar');
     const progressText = document.querySelector('.progress-text');
@@ -64,3 +67,14 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
 
     xhr.send(formData);
 });
+
+async function compressVideo(file) {
+    const { createFFmpeg, fetchFile } = FFmpeg;
+    const ffmpeg = createFFmpeg({ log: true });
+    await ffmpeg.load();
+    ffmpeg.FS('writeFile', 'input.mp4', await fetchFile(file));
+    // Higher compression ratio
+    await ffmpeg.run('-i', 'input.mp4', '-vcodec', 'libx264', '-preset', 'slow', '-crf', '51', 'output.mp4');
+    const data = ffmpeg.FS('readFile', 'output.mp4');
+    return new Blob([data.buffer], { type: 'video/mp4' });
+}

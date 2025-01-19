@@ -1,161 +1,8 @@
+
 body {
-    background-color: #121212;
-    color: #eaeaea;
     font-family: 'Poppins', sans-serif;
 }
 
-h1 {
-    text-transform: uppercase;
-}
-
-.hero-section {
-    background-image: url('https://api.lfcup.cn/photo/files/677bb07f3a332.webp');
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: blur(8px);
-    padding: 50px;
-    border-radius: 20px;
-    color: white;
-    margin: 8px;
-}
-
-.card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 30px;
-    margin: 8px;
-    backdrop-filter: blur(6px);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.04);
-}
-
-.button {
-    background-color: #FF5722;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #FF784E;
-}
-
-footer {
-    margin-top: 30px;
-    border-top: 2px solid #fff;
-    padding-top: 20px;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.footer-logo img {
-    max-width: 150px;
-}
-
-.footer-sponsor {
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 18px;
-    color: #ccc;
-}
-.inline-form {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.inline-form label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #e0e0e0;
-}
-
-.inline-form input[type="text"] {
-    flex: 1;
-    max-width: 300px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    outline: none;
-    transition: all 0.3s;
-}
-
-.inline-form input[type="text"]:focus {
-    background-color: #444;
-}
-
-.inline-form input[type="submit"] {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #5e6f78;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.inline-form input[type="submit"]:hover {
-    background-color: #4a565f;
-}
-form {
-    margin-top: 20px;
-}
-
-label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #e0e0e0;
-}
-
-input[type="text"] {
-    width: 60%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    outline: none;
-    transition: all 0.3s;
-}
-
-input[type="text"]:focus {
-    background-color: #444;
-}
-
-input[type="submit"] {
-    padding: 10px 20px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #5e6f78;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #4a565f;
-}
 .a2 {
     color: #3794ff;
     text-decoration: none;
@@ -191,21 +38,31 @@ th, td {
 }
 
 th {
-    background-color:rgba(53, 73, 162, 0.9);
+    background-color:rgb(36, 117, 137);
 }
 
 td {
-    background-color:rgba(15, 29, 49, 0.9);
+    background-color:rgba(0, 65, 81, 0.901);
 }
 
 td strong {
-    color: #dcdcdc;
+    color: rgb(207, 245, 255);
+
 }
+
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background:rgba(0, 0, 0, 0.34);
+    background:rgba(3, 34, 42, 0.304);
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+}
+
+.container2 {
+    max-width: 800px;
+    margin: 0 auto;
+    background:rgba(24, 112, 134, 0.205);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
 }
