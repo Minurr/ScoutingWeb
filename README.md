@@ -1,4 +1,4 @@
-# ScoutWeb V2.0.0
+# ScoutWeb V2.4.0
 FRC5516's scouting website for FRC/FTC
 
 Tips: its still writing, but as of now, the basic functions and some additional functions have been completed.
