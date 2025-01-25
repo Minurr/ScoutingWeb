@@ -1,11 +1,10 @@
 # IM-Scout Web V2.4.0
-#### Design by FRC#5516.
+### Design by FRC#5516.
 
 IM-Scout(ScoutWeb) is a scouting website for FRC/FTC teams, designed to upload, query, and analyze scouting data. This making it easier for users to manage scouting data.
 
 IM-Scout(ScoutWeb) 是为 FRC/FTC 队伍设计的侦察网站，用于上传、查询和分析侦察数据。这使用户更容易管理侦察数据。
 
----
 
 ## Key Features 主要功能
 
@@ -28,21 +27,21 @@ IM-Scout(ScoutWeb) 是为 FRC/FTC 队伍设计的侦察网站，用于上传、�
 ### UI/UX Enhancements 用户界面/体验增强
 - **Sleek Design**: The UI has been revamped with a modern, Material Design-inspired style, delivering an intuitive and user-friendly experience.
 - **流畅设计**: 用户图形界面采用了受 Google Material You 启发的现代风格，使用了特定的主题颜色，提供了直观和用户友好的体验。
----
+
 
 ## System Requirements 环境配置
 
 - **PHP Version**: ≥7.4
 - **Nginx Version**: =1.24.0
 
----
+
 
 ## Server Setup 服务器配置
 
 The system runs on PHP and Nginx. Please ensure your server meets the required versions for optimal performance.
 系统使用 PHP 和 Nginx。请确保您的服务器符合所需的版本，以获得最佳性能，如您使用宝塔面板，可直接导入使用。
 
----
+
 
 ## How to Use 如何使用？
 
@@ -71,21 +70,21 @@ The system runs on PHP and Nginx. Please ensure your server meets the required v
     数据上传后，系统将自动分析数据，并为团队和联盟生成建议表。
 
 
----
+
 
 ## Contributing 帮助我们
 
 If you'd like to contribute to IM-Scout(ScoutWeb), feel free to submit a Pull Request or open an Issue. We welcome any suggestions or improvements!
 如果你想为 IM-Scout(ScoutWeb) 做出贡献，请随时提交 Pull Request 或打开一个 Issue。我们欢迎任何建议或改进！
 
----
+
 
 ## License 许可证
 
 IM-Scout(ScoutWeb) is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 IM-Scout 使用 [MIT License](https://opensource.org/licenses/MIT) 开源许可协议。
 
----
+
 
 <footer>
     <div class="footer-content">
