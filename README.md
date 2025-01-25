@@ -1,5 +1,5 @@
 # IM-Scout Web V2.4.0
-#### Design by FRC#5516.
+### Design by FRC#5516.
 
 IM-Scout(ScoutWeb) is a scouting website for FRC/FTC teams, designed to upload, query, and analyze scouting data. This making it easier for users to manage scouting data.<br>
 
@@ -7,6 +7,12 @@ IM-Scout(ScoutWeb) 是为 FRC/FTC 队伍设计的侦察网站，用于上传、�
 
 ---
 
+## System Requirements 环境配置
+
+- **PHP Version**: ≥7.4
+- **Nginx Version**: =1.24.0
+
+---
 ## Key Features 主要功能
 
 ### Data Management 数据管理
@@ -30,12 +36,7 @@ IM-Scout(ScoutWeb) 是为 FRC/FTC 队伍设计的侦察网站，用于上传、�
 - **流畅设计**: 用户图形界面采用了受 Google Material You 启发的现代风格，使用了特定的主题颜色，提供了直观和用户友好的体验。
 ---
 
-## System Requirements 环境配置
 
-- **PHP Version**: ≥7.4
-- **Nginx Version**: =1.24.0
-
----
 
 ## Server Setup 服务器配置
 
