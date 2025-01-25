@@ -1,7 +1,7 @@
 # IM-Scout Web V2.4.0
 #### Design by FRC#5516.
 
-IM-Scout(ScoutWeb) is a scouting website for FRC/FTC teams, designed to upload, query, and analyze scouting data. This making it easier for users to manage scouting data.
+IM-Scout(ScoutWeb) is a scouting website for FRC/FTC teams, designed to upload, query, and analyze scouting data. This making it easier for users to manage scouting data.<br>
 
 IM-Scout(ScoutWeb) 是为 FRC/FTC 队伍设计的侦察网站，用于上传、查询和分析侦察数据。这使用户更容易管理侦察数据。
 
@@ -39,7 +39,7 @@ IM-Scout(ScoutWeb) 是为 FRC/FTC 队伍设计的侦察网站，用于上传、�
 
 ## Server Setup 服务器配置
 
-The system runs on PHP and Nginx. Please ensure your server meets the required versions for optimal performance.
+The system runs on PHP and Nginx. Please ensure your server meets the required versions for optimal performance.<br>
 系统使用 PHP 和 Nginx。请确保您的服务器符合所需的版本，以获得最佳性能，如您使用宝塔面板，可直接导入使用。
 
 ---
@@ -47,27 +47,27 @@ The system runs on PHP and Nginx. Please ensure your server meets the required v
 ## How to Use 如何使用？
 
 1. **Set Up the Environment 设置环境**:  
-    Make sure your server meets the required PHP and Nginx versions. After setting up, deploy the website.
+    Make sure your server meets the required PHP and Nginx versions. After setting up, deploy the website.<br>
     确保服务器符合所需的 PHP 和 Nginx 版本。设置完成后，部署网站。
 
 2. **Change Config 更改配置**:
-    Change the API link within /view/index.php and the preamble to ensure smart analytics are available.
+    Change the API link within /view/index.php and the preamble to ensure smart analytics are available.<br>
     更改/view/index.php内的API链接以及前置语，以确保智能分析功能可用。
 
 3. **Change Forms 更改表单**:
-   After logging into your administrator account, visit the /admin page to change the Scouting form. Or just open /config.php to change the form.
+   After logging into your administrator account, visit the /admin page to change the Scouting form. Or just open /config.php to change the form.<br>
    登录管理员账号后，访问/admin页更改Scouting表单。或直接打开/config.php更改表单。
 
 4. **User Registration 用户注册**:  
-    Register using the REG-code for security. After registration, users are assigned tasks and permissions based on their group.
+    Register using the REG-code for security. After registration, users are assigned tasks and permissions based on their group.<br>
     使用 REG 代码进行安全注册。注册后，将根据用户组为其分配任务和权限。
 
 5. **Data Upload 数据上传**:  
-    Once logged in, users can upload scouting data and associate it with match videos.
+    Once logged in, users can upload scouting data and associate it with match videos.<br>
     登录后，用户可以上传球探数据，并将其与比赛视频相关联。
 
 6. **Intelligent Analysis 智能分析**:  
-    After data upload, the system will automatically analyze the data and generate suggestion tables for teams and alliances.
+    After data upload, the system will automatically analyze the data and generate suggestion tables for teams and alliances.<br>
     数据上传后，系统将自动分析数据，并为团队和联盟生成建议表。
 
 
@@ -75,14 +75,14 @@ The system runs on PHP and Nginx. Please ensure your server meets the required v
 
 ## Contributing 帮助我们
 
-If you'd like to contribute to IM-Scout(ScoutWeb), feel free to submit a Pull Request or open an Issue. We welcome any suggestions or improvements!
+If you'd like to contribute to IM-Scout(ScoutWeb), feel free to submit a Pull Request or open an Issue. We welcome any suggestions or improvements!<br>
 如果你想为 IM-Scout(ScoutWeb) 做出贡献，请随时提交 Pull Request 或打开一个 Issue。我们欢迎任何建议或改进！
 
 ---
 
 ## License 许可证
 
-IM-Scout(ScoutWeb) is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+IM-Scout(ScoutWeb) is licensed under the [MIT License](https://opensource.org/licenses/MIT).<br>
 IM-Scout 使用 [MIT License](https://opensource.org/licenses/MIT) 开源许可协议。
 
 ---
