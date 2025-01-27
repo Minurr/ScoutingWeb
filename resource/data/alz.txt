@@ -1,0 +1,127 @@
+Analyze Time: 2025/1/26 13:13:45
+<br><hr>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container {
+          width: auto;
+          overflow-x: auto;
+          margin-bottom: 20px;
+        }
+
+        table {
+            width: auto;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+          font-size: 12px;
+        }
+
+        th, td {
+            border: 1px solid #555;
+            padding: 4px;
+            text-align: center;
+            
+        }
+
+        th {
+            background-color: #333;
+            color: #eee;
+        }
+
+        tr:nth-child(even) {
+            background-color: #282828;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #222;
+        }
+
+        .highlight {
+            background-color: #784f00;
+        }
+
+    </style>
+</head>
+<body>
+    <p style="font-weight: bold; text-align: center;">Team 5516 should prioritize teams that excel in areas where they are weak, particularly in collecting and processing algae during the non-autonomous phase. Teams that demonstrate strong L3 and L4 Coral placement are also valuable to complement 5516's strengths in L1 and L2.</p>
+<br>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Team Code</th>
+                <th>Match Code</th>
+                <th>Match Type</th>
+                <th>Auto L1 Coral</th>
+                <th>Auto L2 Coral</th>
+                <th>Auto L3 Coral</th>
+                <th>Auto L4 Coral</th>
+                <th>Auto Processor</th>
+                <th>Auto Net</th>
+                <th>L1 Coral</th>
+                <th>L2 Coral</th>
+                <th>L3 Coral</th>
+                <th>L4 Coral</th>
+                <th>Processor</th>
+                <th>Net</th>
+                <th>Cage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>9999</td><td>1</td><td>Playoff</td><td>2</td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>4</td><td>7</td><td>0</td><td>0</td><td>3</td><td>6</td><td>Shallow Cage</td></tr>
+            <tr class="highlight"><td>5516</td><td>1</td><td>Playoff</td><td>4</td><td>5</td><td>0</td><td>0</td><td>1</td><td>3</td><td>2</td><td>1</td><td>7</td><td>8</td><td>2</td><td>6</td><td>Deep Cage</td></tr>
+            <tr><td>2222</td><td>1</td><td>Playoff</td><td>2</td><td>1</td><td>2</td><td>1</td><td>1</td><td>3</td><td>2</td><td>1</td><td>2</td><td>3</td><td>2</td><td>1</td><td>Shallow Cage</td></tr>
+            <tr><td>1145</td><td>1</td><td>Playoff</td><td>9</td><td>8</td><td>0</td><td>0</td><td>1</td><td>3</td><td>7</td><td>1</td><td>6</td><td>5</td><td>2</td><td>3</td><td>Deep Cage</td></tr>
+            <tr><td>4444</td><td>1</td><td>Playoff</td><td>1</td><td>2</td><td>0</td><td>5</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td><td>6</td><td>8</td><td>Deep Cage</td></tr>
+            <tr><td>9999</td><td>2</td><td>Playoff</td><td>2</td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>4</td><td>7</td><td>0</td><td>0</td><td>3</td><td>6</td><td>Shallow Cage</td></tr>
+            <tr><td>2025</td><td>1</td><td>Playoff</td><td>1</td><td>2</td><td>1</td><td>4</td><td>1</td><td>1</td><td>2</td><td>5</td><td>4</td><td>2</td><td>1</td><td>3</td><td>Shallow Cage</td></tr>
+            <tr><td>7777</td><td>1</td><td>Playoff</td><td>1</td><td>1</td><td>2</td><td>2</td><td>7</td><td>5</td><td>7</td><td>5</td><td>4</td><td>4</td><td>7</td><td>7</td><td>Shallow Cage</td></tr>
+            <tr><td>9898</td><td>1</td><td>Playoff</td><td>2</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>Shallow Cage</td></tr>
+            <tr><td>7878</td><td>1</td><td>Playoff</td><td>1</td><td>1</td><td>2</td><td>1</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>No structure, No climb</td></tr>
+            <tr><td>8814</td><td>1</td><td>qualification</td><td>3</td><td>0</td><td>2</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>Shallow Cage</td></tr>
+        </tbody>
+    </table>
+</div>
+<p style="font-weight: bold; text-align: center;">Based on weaknesses and strengths, Team 5516 should consider the following teams as alliance partners (in order of priority):<br><br> 1. Team 7777;<br> 2. Team 1145;<br> 3. Team 2025.</p><br>
+
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Team Code</th>
+                <th>Strengths</th>
+                <th>Weaknesses</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>9999</td><td>Consistent in Auto L1/L2 Coral, good at collecting algae in non-auto phase.</td><td>Struggles with L3/L4 Coral placement.</td></tr>
+            <tr class="highlight"><td>5516</td><td>Strong in Auto L1/L2 Coral, excels in L4 Coral, moderate algae processing.</td><td>Weak in L3 Coral, needs improvement in non-auto algae collection.</td></tr>
+            <tr><td>2222</td><td>Balanced performance across all levels, consistent in autonomous mode.</td><td>Average in algae processing and collection.</td></tr>
+            <tr><td>1145</td><td>Exceptional in Auto L1/L2 Coral, strong L3/L4 performance in non-auto.</td><td>Could improve in algae processing.</td></tr>
+            <tr><td>4444</td><td>Good in Auto L4 Coral and non-auto algae processing/collection.</td><td>Inconsistent in Coral placement across other levels.</td></tr>
+            <tr><td>2025</td><td>Good in Auto L4 and non-auto L2/L3 Coral placement.</td><td>Average in algae collection, could improve in Auto L1/L2.</td></tr>
+            <tr><td>7777</td><td>Strong in algae processing and collection, good L1/L2 Coral.</td><td>Could improve in Auto L3/L4 performance.</td></tr>
+            <tr><td>9898</td><td>Consistent in autonomous mode, decent Auto L1/L2.</td><td>Very weak in non-autonomous mode, no L1-L4 Coral placement.</td></tr>
+            <tr><td>7878</td><td>Strong in Auto algae processing.</td><td>Very weak in non-autonomous mode, minimal Coral placement.</td></tr>
+            <tr><td>8814</td><td>Decent in Auto L1/L3 Coral.</td><td>Struggles with L2/L4 Coral, no algae processing/collection.</td></tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+
+

@@ -3,13 +3,11 @@ session_start();
 $file = '../resource/data/users.txt';
 include '../config.php';
 
-// 检查是否已登录
 if (!isset($_SESSION['email'])) {
-    echo "<p>请先登录</p>";
+    echo "<p>pls login first.</p>";
     exit;
 }
 
-// 检查用户的权限或身份，仅允许用户修改自己的信息
 $userEmail = $_SESSION['email'];
 
 function readUsers($file) {
@@ -74,14 +72,14 @@ $currentUser = reset($currentUser); // 获取当前用户信息
     <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/v_styles.css" rel="stylesheet">
     <style>
-    table {
-        border: 1px solid black;
-    }
-    @media only screen and (max-width: 600px) {
         table {
-            font-size: 13px;
+            border: 1px solid black;
         }
-    }
+        @media only screen and (max-width: 600px) {
+            table {
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 <body class="dark">

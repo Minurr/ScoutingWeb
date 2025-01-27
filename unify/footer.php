@@ -2,7 +2,7 @@
     <div class="footer-content">
         <div class="footer-sponsor">
             <b>
-                <p>Sponsors 鸣谢赞助: </p>
+                <p>Sponsors : </p>
             </b>
         </div>
         <div class="footer-logo">
@@ -11,6 +11,7 @@
         </div>
     </div>
     <p>Current Server: Aliyun-Shanghai</p>
+    <p>Telephone: +1 (304) 315-2010</p>
 </footer>
 <footer class="text-center p-5">
     <p>Copyright &copy; 2025 IronMaple@Minur.</p>
