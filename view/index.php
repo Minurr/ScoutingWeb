@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     header('Content-Type: application/json');
 
-    define('OPENAI_API_KEY', 'sk-IcS6sJJNS4TqBZYHA9lIGxPU7gEQkR8o2HONt9qyUvKHsi91');
+    define('OPENAI_API_KEY', 'sk-');
     if (isset($_POST['action']) && $_POST['action'] === 'analyze') {
         $filePath = '../resource/data/scout_data.txt';
 
@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $fileContent = file_get_contents($filePath);
 
-        $apiUrl = "https://api.bianxie.ai/v1/chat/completions";
+        $apiUrl = "https://api.xx.xx/v1/chat/completions";
         $data = [
             "model" => "gemini-exp-1121",
             "messages" => [
