@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 function verifyRegCode($reg_code) {
-    $valid_codes = ['IronMaple_5516_SCOUT_0x1s5kjdl'];
+    $valid_codes = ['PUT_YOUR_REG_CODE_HERE'];
     return in_array($reg_code, $valid_codes);
 }
 ?>

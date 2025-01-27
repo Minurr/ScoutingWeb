@@ -76,7 +76,7 @@ function checkPermission($allowedGroups) {
             <body>
                 <div class="container">
                     <h1>403 Forbidden</h1>
-                    <p>Access Denied.<br>You do not have permission to access this page.<br><br>To prevent extraneous video uploads from affecting bandwidth, and malicious attacks from the Internet, this page is only open to media groups, outreach groups, and administrator groups.<br><br>为防止无关的视频上传影响带宽，和来自互联网的恶意攻击，该页面只开放给媒体组、外联组以及管理员组别。<br><br>Redirected back after 10 seconds.</p>
+                    <p>Access Denied.<br>You do not have permission to access this page.<br><br>To prevent extraneous video uploads from affecting bandwidth, and malicious attacks from the Internet, this page is only open to media groups, outreach groups, and administrator groups.<br><br>Redirected back after 10 seconds.</p>
                     <hr>
                     <footer>IronMaple@Minur_</footer>
                 </div>

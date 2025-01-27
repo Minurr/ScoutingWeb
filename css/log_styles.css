@@ -1,16 +1,14 @@
-/* 基础样式重置 */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 全局字体和背景 */
 body {
     line-height: 1.6;
 }
 
-/* 头部样式 */
 header {
     background-color: #1e1e1e;
     padding: 20px;
@@ -28,7 +26,6 @@ header p {
     font-size: 1rem;
 }
 
-/* 卡片布局 */
 .card {
     background-color: #1f1f1f;
     border-radius: 10px;
@@ -70,7 +67,6 @@ header p {
     background-color: #089f3d;
 }
 
-/* 网格布局 */
 section {
     padding: 20px;
 }
@@ -97,7 +93,6 @@ section {
     }
 }
 
-/* 响应式设计 */
 @media (max-width: 767px) {
     body {
         font-size: 14px;
@@ -120,7 +115,6 @@ section {
     }
 }
 
-/* 按钮样式 */
 .button {
     background-color: #007BFF;
     color: white;
@@ -135,7 +129,6 @@ section {
     background-color: #0056b3;
 }
 
-/* 处理暗黑模式 */
 body.dark {
     background-color: #121212;
     color: #f4f4f4;

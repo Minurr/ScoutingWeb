@@ -1,14 +1,10 @@
 <?php
-// 权限检查函数，接收一个包含多个组别的数组
 function checkPermission($allowedGroups) {
-    // 启动会话管理
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }
 
-    // 确保 $_SESSION['group'] 已设置，并检查用户组是否在允许的组别中
     if (!isset($_SESSION['group']) || !in_array($_SESSION['group'], $allowedGroups)) {
-        // 如果不在允许的组别中，显示访问被拒绝的消息
         header("HTTP/1.1 403 Forbidden");
         echo '
             <?php
@@ -76,7 +72,7 @@ function checkPermission($allowedGroups) {
             <body>
                 <div class="container">
                     <h1>403 Forbidden</h1>
-                    <p>Access Denied.<br>You do not have permission to access this page.<br><br>To prevent unrelated people from opening the admin interface to modify the SCOUT table and team data, this page is only open to the administrator group.<br><br>为防止无关人员打开管理界面修改Scout表和队伍数据，该页面仅开放给管理员组别。<br><br>Redirected back after 10 seconds.</p>
+                    <p>Access Denied.<br>You do not have permission to access this page.<br><br>To prevent unrelated people from opening the admin interface to modify the SCOUT table and team data, this page is only open to the administrator group.<br><br>Redirected back after 10 seconds.</p>
                     <hr>
                     <footer>IronMaple@Minur_</footer>
                 </div>

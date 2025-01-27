@@ -111,9 +111,9 @@ $users = readUsers($file);
     <table border="1">
         <thead>
             <tr>
-                <th>Name 昵称</th>
-                <th>Email 邮箱</th>
-                <th>Group 组别</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Group</th>
             </tr>
         </thead>
         <tbody>

@@ -29,8 +29,8 @@
     </header>
     <section class="hero-section">
         <h2>F<?php echo $com_type ?>#<?php echo $team ?></h2>
-        <h2 class="text-2xl">欢迎来到 F<?php echo $com_type ?> 2025</h2>
-        <p>这里是<?php echo $teamname ?>的SCOUT网站，你可以在这里找到各种类型的数据和技巧、分类。</p>
+        <h2 class="text-2xl">Welcome to  F<?php echo $com_type ?> 2025</h2>
+        <p>Here is <?php echo $teamname ?>'s SCOUT site, you can find all kinds of data and analysis here.</p>
     </section>
     <section class="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <div id="login-form">
@@ -61,12 +61,12 @@
                 <label for="register-password">Password</label>
                 <input type="password" id="register-password" placeholder="Please enter password">
             </div>
-            <label for="group">选择组别</label>
+            <label for="group">Select Group</label>
             <select id="group" name="group" style="color:black" required>
-                <option value="程序组">程序组</option>
-                <option value="机械组">机械组</option>
-                <option value="外联组">外联组</option>
-                <option value="媒体组">媒体组</option>
+                <option value="程序组">Programming</option>
+                <option value="机械组">Mechanical</option>
+                <option value="外联组">Outreach</option>
+                <option value="媒体组">Media</option>
             </select>
             <br><br>
             <hr><br>
@@ -83,7 +83,7 @@
     <?php include '../unify/footer.php'; ?>
 
     <script>
-        // 切换显示表单的函数
+        // 切换表单
         function toggleForm(formType) {
             if (formType === 'login') {
                 document.getElementById('login-form').style.display = 'block';
@@ -94,7 +94,7 @@
             }
         }
 
-        // 注册函数
+        // 注册
         async function register() {
             try {
                 const username = document.getElementById('username').value;
@@ -128,7 +128,7 @@
             }
         }
 
-        // 登录函数
+        // 登录
         async function login() {
             try {
                 const email = document.getElementById('email').value;

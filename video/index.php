@@ -9,19 +9,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $matchCode = isset($_POST['match_code']) ? $_POST['match_code'] : null;
     $videoFile = isset($_FILES['video']) ? $_FILES['video'] : null;
 
-    // 检查是否填写了必要的字段
     if (!$teamCode || !$matchCode || !$videoFile) {
         $response = ['success' => false, 'message' => 'REQUIRED.'];
         echo json_encode($response);
         exit;
     }
 
-    // 上传视频文件
-    $uploadDir = '../resource/videos/';  // 你的视频存储路径
+    $uploadDir = '../resource/videos/';
     $videoPath = $uploadDir . basename($videoFile['name']);
 
     if (move_uploaded_file($videoFile['tmp_name'], $videoPath)) {
-        // 文件成功上传，保存视频数据
         $scoutVideoFile = '../resource/data/scout_video.txt';
         $videoData = "Team Code: $teamCode\nMatch Code: $matchCode\nVideo Path: $videoPath\n\n";
 
@@ -38,7 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $response = ['success' => false, 'message' => 'Error uploading video.'];
     }
 
-    // 返回 JSON 响应
     echo json_encode($response);
     exit;
 }
@@ -59,6 +55,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/vdo_styles.css" rel="stylesheet">
     <script src="https://unpkg.com/sober/dist/sober.min.js"></script>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background:rgba(24, 112, 134, 0.205);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 30px;
+        }
+    </style>
 </head>
 
 <body class="dark">
@@ -115,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             progressContainer.style.display = 'block';
             const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'https://api4.lfcup.cn/upload.php', true);
+            xhr.open('POST', 'https://api4.xxxxxxx.xxxx/upload.php', true);
 
             xhr.upload.addEventListener('progress', function (event) {
                 if (event.lengthComputable) {
