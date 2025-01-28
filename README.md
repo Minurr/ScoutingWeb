@@ -5,6 +5,8 @@ IM-Scout(ScoutWeb) is a scouting website for FRC/FTC teams, designed to upload, 
 
 IM-Scout(ScoutWeb) 是为 FRC/FTC 队伍设计的侦察网站，用于上传、查询和分析侦察数据。这使用户更容易管理侦察数据。
 
+[Our post is in ChiefDelphi forum](https://www.chiefdelphi.com/t/introducing-to-maple-scout-the-first-ai-powered-scouting-webapp/483772)
+
 ---
 
 ## System Requirements 环境配置
