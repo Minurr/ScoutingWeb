@@ -1,127 +1,434 @@
-Analyze Time: 2025/1/26 13:13:45
-<br><hr>
+分析时间: 2025/2/6 19:32:54
+
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Analysis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>队伍表现分析</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            color: #f0f0f0; /* 深色模式文字颜色 */
+            /*background-color: #121212; !* 深色模式背景颜色 *!*/
             margin: 0;
-            padding: 10px;
+            padding: 0;
         }
 
+
         .container {
-          width: auto;
-          overflow-x: auto;
-          margin-bottom: 20px;
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 10px;
+            overflow-x: auto; /* 允许水平滚动 */
         }
 
         table {
-            width: auto;
+            width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
-          font-size: 12px;
+            background-color: #212121; /* 深色模式表格背景颜色 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 深色模式阴影 */
         }
 
         th, td {
-            border: 1px solid #555;
-            padding: 4px;
-            text-align: center;
-            
+            border: 1px solid #373737; /* 深色模式边框颜色 */
+            padding: 8px;
+            text-align: left;
+            color: #e0e0e0; /* 深色模式表格文字颜色 */
         }
 
         th {
-            background-color: #333;
-            color: #eee;
+            background-color: #303030; /* 深色模式表头颜色 */
         }
 
-        tr:nth-child(even) {
-            background-color: #282828;
+        .alliance-recommendation {
+            font-weight: bold;
+            color: #4caf50; /* 推荐颜色 */
         }
-
-        tr:nth-child(odd) {
-            background-color: #222;
-        }
-
-        .highlight {
-            background-color: #784f00;
+        /* 手机端样式 */
+        @media (max-width: 768px) {
+            .container {
+                width: 100%; /* 占据100%宽度 */
+            }
+            table {
+                font-size: 12px; /* 减小字体大小 */
+            }
+            th, td {
+                padding: 6px; /* 减小内边距 */
+            }
         }
 
     </style>
 </head>
 <body>
-    <p style="font-weight: bold; text-align: center;">Team 5516 should prioritize teams that excel in areas where they are weak, particularly in collecting and processing algae during the non-autonomous phase. Teams that demonstrate strong L3 and L4 Coral placement are also valuable to complement 5516's strengths in L1 and L2.</p>
-<br>
-<div class="container">
-    <table>
-        <thead>
-            <tr>
-                <th>Team Code</th>
-                <th>Match Code</th>
-                <th>Match Type</th>
-                <th>Auto L1 Coral</th>
-                <th>Auto L2 Coral</th>
-                <th>Auto L3 Coral</th>
-                <th>Auto L4 Coral</th>
-                <th>Auto Processor</th>
-                <th>Auto Net</th>
-                <th>L1 Coral</th>
-                <th>L2 Coral</th>
-                <th>L3 Coral</th>
-                <th>L4 Coral</th>
-                <th>Processor</th>
-                <th>Net</th>
-                <th>Cage</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>9999</td><td>1</td><td>Playoff</td><td>2</td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>4</td><td>7</td><td>0</td><td>0</td><td>3</td><td>6</td><td>Shallow Cage</td></tr>
-            <tr class="highlight"><td>5516</td><td>1</td><td>Playoff</td><td>4</td><td>5</td><td>0</td><td>0</td><td>1</td><td>3</td><td>2</td><td>1</td><td>7</td><td>8</td><td>2</td><td>6</td><td>Deep Cage</td></tr>
-            <tr><td>2222</td><td>1</td><td>Playoff</td><td>2</td><td>1</td><td>2</td><td>1</td><td>1</td><td>3</td><td>2</td><td>1</td><td>2</td><td>3</td><td>2</td><td>1</td><td>Shallow Cage</td></tr>
-            <tr><td>1145</td><td>1</td><td>Playoff</td><td>9</td><td>8</td><td>0</td><td>0</td><td>1</td><td>3</td><td>7</td><td>1</td><td>6</td><td>5</td><td>2</td><td>3</td><td>Deep Cage</td></tr>
-            <tr><td>4444</td><td>1</td><td>Playoff</td><td>1</td><td>2</td><td>0</td><td>5</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td><td>6</td><td>8</td><td>Deep Cage</td></tr>
-            <tr><td>9999</td><td>2</td><td>Playoff</td><td>2</td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>4</td><td>7</td><td>0</td><td>0</td><td>3</td><td>6</td><td>Shallow Cage</td></tr>
-            <tr><td>2025</td><td>1</td><td>Playoff</td><td>1</td><td>2</td><td>1</td><td>4</td><td>1</td><td>1</td><td>2</td><td>5</td><td>4</td><td>2</td><td>1</td><td>3</td><td>Shallow Cage</td></tr>
-            <tr><td>7777</td><td>1</td><td>Playoff</td><td>1</td><td>1</td><td>2</td><td>2</td><td>7</td><td>5</td><td>7</td><td>5</td><td>4</td><td>4</td><td>7</td><td>7</td><td>Shallow Cage</td></tr>
-            <tr><td>9898</td><td>1</td><td>Playoff</td><td>2</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>Shallow Cage</td></tr>
-            <tr><td>7878</td><td>1</td><td>Playoff</td><td>1</td><td>1</td><td>2</td><td>1</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>No structure, No climb</td></tr>
-            <tr><td>8814</td><td>1</td><td>qualification</td><td>3</td><td>0</td><td>2</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>Shallow Cage</td></tr>
-        </tbody>
-    </table>
-</div>
-<p style="font-weight: bold; text-align: center;">Based on weaknesses and strengths, Team 5516 should consider the following teams as alliance partners (in order of priority):<br><br> 1. Team 7777;<br> 2. Team 1145;<br> 3. Team 2025.</p><br>
 
 <div class="container">
+    <p>
+    <strong>综合分析：</strong> 5516 队伍在自主阶段表现出色，尤其在L1和L2珊瑚的采集上，但在后期L3和L4珊瑚的采集方面存在明显短板。联盟选择应侧重于弥补5516队伍在后期珊瑚采集上的不足，同时考虑到队伍的爬升能力。
+</p>
+    <h2>队伍数据总览</h2>
     <table>
         <thead>
-            <tr>
-                <th>Team Code</th>
-                <th>Strengths</th>
-                <th>Weaknesses</th>
-                
-            </tr>
+        <tr>
+            <th>队伍代码</th>
+            <th>比赛代码</th>
+            <th>比赛类型</th>
+            <th>Auto L1 珊瑚</th>
+            <th>Auto L2 珊瑚</th>
+            <th>Auto L3 珊瑚</th>
+            <th>Auto L4 珊瑚</th>
+            <th>Auto 海藻 加工站</th>
+            <th>Auto 海藻 收集网</th>
+            <th>L1 珊瑚</th>
+            <th>L2 珊瑚</th>
+            <th>L3 珊瑚</th>
+            <th>L4 珊瑚</th>
+            <th>海藻 加工站</th>
+            <th>海藻 收集网</th>
+            <th>驳船 爬升</th>
+        </tr>
         </thead>
         <tbody>
-            <tr><td>9999</td><td>Consistent in Auto L1/L2 Coral, good at collecting algae in non-auto phase.</td><td>Struggles with L3/L4 Coral placement.</td></tr>
-            <tr class="highlight"><td>5516</td><td>Strong in Auto L1/L2 Coral, excels in L4 Coral, moderate algae processing.</td><td>Weak in L3 Coral, needs improvement in non-auto algae collection.</td></tr>
-            <tr><td>2222</td><td>Balanced performance across all levels, consistent in autonomous mode.</td><td>Average in algae processing and collection.</td></tr>
-            <tr><td>1145</td><td>Exceptional in Auto L1/L2 Coral, strong L3/L4 performance in non-auto.</td><td>Could improve in algae processing.</td></tr>
-            <tr><td>4444</td><td>Good in Auto L4 Coral and non-auto algae processing/collection.</td><td>Inconsistent in Coral placement across other levels.</td></tr>
-            <tr><td>2025</td><td>Good in Auto L4 and non-auto L2/L3 Coral placement.</td><td>Average in algae collection, could improve in Auto L1/L2.</td></tr>
-            <tr><td>7777</td><td>Strong in algae processing and collection, good L1/L2 Coral.</td><td>Could improve in Auto L3/L4 performance.</td></tr>
-            <tr><td>9898</td><td>Consistent in autonomous mode, decent Auto L1/L2.</td><td>Very weak in non-autonomous mode, no L1-L4 Coral placement.</td></tr>
-            <tr><td>7878</td><td>Strong in Auto algae processing.</td><td>Very weak in non-autonomous mode, minimal Coral placement.</td></tr>
-            <tr><td>8814</td><td>Decent in Auto L1/L3 Coral.</td><td>Struggles with L2/L4 Coral, no algae processing/collection.</td></tr>
+        <tr>
+            <td>9999</td>
+            <td>1</td>
+            <td>Playoff</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+            <td>7</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3</td>
+            <td>6</td>
+            <td>浅吊笼</td>
+        </tr>
+        <tr>
+            <td>5516</td>
+            <td>1</td>
+            <td>Playoff</td>
+            <td>4</td>
+            <td>5</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>7</td>
+            <td>8</td>
+            <td>2</td>
+            <td>6</td>
+            <td>深吊笼</td>
+        </tr>
+        <tr>
+            <td>2222</td>
+            <td>1</td>
+            <td>Playoff</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>浅吊笼</td>
+        </tr>
+        <tr>
+            <td>1145</td>
+            <td>1</td>
+            <td>Playoff</td>
+            <td>9</td>
+            <td>8</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>3</td>
+            <td>7</td>
+            <td>1</td>
+            <td>6</td>
+            <td>5</td>
+            <td>2</td>
+            <td>3</td>
+            <td>深吊笼</td>
+        </tr>
+        <tr>
+            <td>4444</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>0</td>
+            <td>5</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>6</td>
+            <td>8</td>
+            <td>深吊笼</td>
+        </tr>
+        <tr>
+            <td>9999</td>
+            <td>2</td>
+            <td>Playoff</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+            <td>7</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3</td>
+            <td>6</td>
+            <td>浅吊笼</td>
+        </tr>
+        <tr>
+            <td>2025</td>
+            <td>1</td>
+            <td>Playoff</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>4</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>浅吊笼</td>
+        </tr>
+        <tr>
+            <td>7777</td>
+            <td>1</td>
+            <td>Playoff</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>7</td>
+            <td>5</td>
+            <td>7</td>
+            <td>5</td>
+            <td>4</td>
+            <td>4</td>
+            <td>7</td>
+            <td>7</td>
+            <td>浅吊笼</td>
+        </tr>
+        <tr>
+            <td>9898</td>
+            <td>1</td>
+            <td>Playoff</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>浅吊笼</td>
+        </tr>
+        <tr>
+            <td>7878</td>
+            <td>1</td>
+            <td>Playoff</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>无结构，没爬升</td>
+        </tr>
+        <tr>
+            <td>8814</td>
+            <td>1</td>
+            <td>qualification</td>
+            <td>3</td>
+            <td>0</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>浅吊笼</td>
+        </tr>
+        <tr>
+            <td>7676</td>
+            <td>1</td>
+            <td>Qualification</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>2</td>
+            <td>2</td>
+            <td>11</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>无结构，没爬升</td>
+        </tr>
+        <tr>
+            <td>1001</td>
+            <td>1</td>
+            <td>Qualification</td>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>浅吊笼</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>队伍优劣势与联盟推荐</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>队伍代码</th>
+            <th>优势</th>
+            <th>劣势</th>
+            <th>联盟推荐度</th>
+            <th>推荐理由</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>9999</td>
+            <td>前期珊瑚采集稳定 (Auto L1: 2, Auto L2: 1, L1:4, L2:7), 海藻收集网效率较高 (6)</td>
+            <td>后期珊瑚采集能力弱 (L3: 0, L4: 0), 爬升方式为浅吊笼</td>
+            <td>低</td>
+            <td>该队伍后期能力与5516相似，无法形成互补。</td>
+        </tr>
+        <tr>
+            <td>5516</td>
+            <td>自主阶段L1,L2珊瑚采集强势 (Auto L1: 4, Auto L2: 5), 具备深吊笼爬升能力</td>
+            <td>后期L3,L4珊瑚采集能力弱 (L3: 7, L4: 8)</td>
+            <td>-</td>
+            <td><strong>本队，评估联盟时的参考标准。</strong></td>
+        </tr>
+        <tr>
+            <td>2222</td>
+            <td>各项能力较为均衡，自主阶段和后期都有一定的珊瑚采集能力 (Auto L3: 2, Auto L4: 1, L3: 2, L4: 3)</td>
+            <td>各项能力都不突出，缺乏亮点</td>
+            <td>中</td>
+            <td>均衡型队伍，可以提供一定的支援，但无法显著提升整体实力。</td>
+        </tr>
+        <tr>
+            <td>1145</td>
+            <td>自主阶段L1,L2珊瑚采集能力极强 (Auto L1: 9, Auto L2: 8), 后期L3,L4珊瑚采集能力较强 (L3: 6, L4: 5), 具备深吊笼爬升能力</td>
+            <td>海藻加工站和收集网效率较低</td>
+            <td class="alliance-recommendation">高</td>
+            <td><strong>自主阶段和后期珊瑚采集能力都非常出色，可以弥补5516在后期采集上的不足。深吊笼爬升也能形成协同。</strong></td>
+        </tr>
+        <tr>
+            <td>4444</td>
+            <td>海藻加工站和收集网效率高 (加工站: 6, 收集网: 8), 具备深吊笼爬升能力</td>
+            <td>前期珊瑚采集能力较弱 (Auto L1: 1, Auto L2: 2), 后期L3珊瑚采集能力弱 (L3: 1)</td>
+            <td>中</td>
+            <td>海藻资源效率高，可以为队伍提供资源支持。</td>
+        </tr>
+        <tr>
+            <td>2025</td>
+            <td>后期L3,L4珊瑚采集能力较好 (L3: 4, L4: 2)</td>
+            <td>整体能力一般，各项数据不突出</td>
+            <td>低</td>
+            <td>能力平庸，对队伍提升有限。</td>
+        </tr>
+        <tr>
+            <td>7777</td>
+            <td>海藻加工站效率极高 (加工站: 7), 后期珊瑚采集能力较强(L1:7,L2:5,L3:4,L4:4)</td>
+            <td>前期珊瑚采集能力弱</td>
+            <td class="alliance-recommendation">高</td>
+            <td><strong>强大的海藻加工能力可以为队伍提供资源保障，同时后期珊瑚采集能力较强，可以弥补5516的不足。</strong></td>
+        </tr>
+        <tr>
+            <td>9898</td>
+            <td>无明显优势</td>
+            <td>各项能力都很弱，没有亮点</td>
+            <td>极低</td>
+            <td>不适合作为联盟对象。</td>
+        </tr>
+        <tr>
+            <td>7878</td>
+            <td>自主阶段海藻加工站能力不错 (4)</td>
+            <td>整体能力很弱，没有爬升结构</td>
+            <td>极低</td>
+            <td>不适合作为联盟对象。</td>
+        </tr>
+                <tr>
+            <td>8814</td>
+            <td>前期具备一定的珊瑚采集能力</td>
+            <td>整体能力一般</td>
+            <td>低</td>
+            <td>不适合作为联盟对象。</td>
+        </tr>
+        <tr>
+            <td>7676</td>
+            <td>L1珊瑚采集能力强(11)</td>
+            <td>爬升能力弱</td>
+            <td>中</td>
+            <td>L1珊瑚采集能力强,可以弥补前期能力，但是爬升能力弱</td>
+        </tr>
+        <tr>
+            <td>1001</td>
+            <td>各项能力均衡</td>
+            <td>各项能力都不突出</td>
+            <td>低</td>
+            <td>不适合作为联盟对象。</td>
+        </tr>
         </tbody>
     </table>
 </div>
+
 </body>
 </html>
-
 
 

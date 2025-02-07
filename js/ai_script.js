@@ -1,6 +1,6 @@
 document.getElementById('analyzeButton').addEventListener('click', function () {
     const output = document.getElementById('output');
-    output.textContent = "IronMaple-AI Data Analyzing, please wait... (Maybe 1~2min)";
+    output.textContent = "IronMaple-AI分析数据中，请稍后... （预计1~2min）";
 
     fetch('', {
         method: 'POST',
@@ -14,7 +14,7 @@ document.getElementById('analyzeButton').addEventListener('click', function () {
                 output.innerHTML = analysisContent;
 
                 const timestamp = new Date().toLocaleString();
-                const analysisWithTimestamp = `Analyze Time: ${timestamp}\n\n${analysisContent}`;
+                const analysisWithTimestamp = `分析时间: ${timestamp}\n\n${analysisContent}`;
 
                 fetch('./save_analysis.php', {
                     method: 'POST',
