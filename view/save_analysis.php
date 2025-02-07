@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         echo json_encode(['success' => true]);
     } else {
-        echo json_encode(['success' => false, 'message' => 'No data to analysis.']);
+        echo json_encode(['success' => false, 'message' => '没有有效的分析数据。']);
     }
     exit;
 }
